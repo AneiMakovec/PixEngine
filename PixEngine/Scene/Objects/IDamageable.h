@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+#import "BattlePosition.h"
+
 @protocol IDamageable <NSObject>
 
 @property (nonatomic) int maxHealthPoints;

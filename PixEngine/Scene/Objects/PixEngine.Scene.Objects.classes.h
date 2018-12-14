@@ -26,11 +26,11 @@
 
 // duration
 @protocol ILifetime;
-@class LifeTime;
+@class LifeTime, ResetableLifetime;
 
 // manipulation
 @protocol ISceneUser, ICustomUpdate;
 
 // combat
 @protocol IDamageable, IDamageDealer, IExperienceGainer, IExperienceGiver;
-@class Entity, DamageDealer;
+@class Entity, DamageDealer, BattlePosition;

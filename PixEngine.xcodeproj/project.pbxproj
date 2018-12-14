@@ -26,6 +26,8 @@
 		B5849BCB21B5B8D600A87782 /* SimpleScene.m in Sources */ = {isa = PBXBuildFile; fileRef = B5849BCA21B5B8D600A87782 /* SimpleScene.m */; };
 		B5849BCF21B5B97E00A87782 /* SceneAction.m in Sources */ = {isa = PBXBuildFile; fileRef = B5849BCE21B5B97E00A87782 /* SceneAction.m */; };
 		B5849BD221B5BA0500A87782 /* SceneEventArgs.m in Sources */ = {isa = PBXBuildFile; fileRef = B5849BD121B5BA0500A87782 /* SceneEventArgs.m */; };
+		B58869AA21C4501F00CE4C0E /* BattlePosition.m in Sources */ = {isa = PBXBuildFile; fileRef = B58869A921C4501F00CE4C0E /* BattlePosition.m */; };
+		B58869AD21C4607C00CE4C0E /* ResetableLifetime.m in Sources */ = {isa = PBXBuildFile; fileRef = B58869AC21C4607C00CE4C0E /* ResetableLifetime.m */; };
 		B5C9FF4B21B4860A00B796F4 /* Random.m in Sources */ = {isa = PBXBuildFile; fileRef = B5C9FF4A21B4860A00B796F4 /* Random.m */; };
 		B5D0A40E21C3F4B9005EF3C6 /* TextureStretcher.m in Sources */ = {isa = PBXBuildFile; fileRef = B5D0A40D21C3F4B9005EF3C6 /* TextureStretcher.m */; };
 		B5D0A41D21C3FA57005EF3C6 /* Entity.m in Sources */ = {isa = PBXBuildFile; fileRef = B5D0A41C21C3FA57005EF3C6 /* Entity.m */; };
@@ -118,6 +120,10 @@
 		B5849BCE21B5B97E00A87782 /* SceneAction.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneAction.m; sourceTree = "<group>"; };
 		B5849BD021B5BA0500A87782 /* SceneEventArgs.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneEventArgs.h; sourceTree = "<group>"; };
 		B5849BD121B5BA0500A87782 /* SceneEventArgs.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneEventArgs.m; sourceTree = "<group>"; };
+		B58869A821C4501F00CE4C0E /* BattlePosition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BattlePosition.h; sourceTree = "<group>"; };
+		B58869A921C4501F00CE4C0E /* BattlePosition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BattlePosition.m; sourceTree = "<group>"; };
+		B58869AB21C4607C00CE4C0E /* ResetableLifetime.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ResetableLifetime.h; sourceTree = "<group>"; };
+		B58869AC21C4607C00CE4C0E /* ResetableLifetime.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ResetableLifetime.m; sourceTree = "<group>"; };
 		B5C9FF4721B485E700B796F4 /* PixEngine.Utilities.classes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PixEngine.Utilities.classes.h; sourceTree = "<group>"; };
 		B5C9FF4821B485FC00B796F4 /* PixEngine.Utilities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PixEngine.Utilities.h; sourceTree = "<group>"; };
 		B5C9FF4921B4860A00B796F4 /* Random.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Random.h; sourceTree = "<group>"; };
@@ -416,6 +422,8 @@
 				B57B0D3721A613950064B91F /* ILifetime.h */,
 				B57B0D3821A613A30064B91F /* Lifetime.h */,
 				B57B0D3921A613A30064B91F /* Lifetime.m */,
+				B58869AB21C4607C00CE4C0E /* ResetableLifetime.h */,
+				B58869AC21C4607C00CE4C0E /* ResetableLifetime.m */,
 			);
 			name = Duration;
 			sourceTree = "<group>";
@@ -431,6 +439,8 @@
 				B5D0A41C21C3FA57005EF3C6 /* Entity.m */,
 				B5D0A42221C4024E005EF3C6 /* DamageDealer.h */,
 				B5D0A42321C4024E005EF3C6 /* DamageDealer.m */,
+				B58869A821C4501F00CE4C0E /* BattlePosition.h */,
+				B58869A921C4501F00CE4C0E /* BattlePosition.m */,
 			);
 			name = Combat;
 			sourceTree = "<group>";
@@ -542,6 +552,7 @@
 				B5C9FF4B21B4860A00B796F4 /* Random.m in Sources */,
 				B57D414621A7757500ABA93B /* ParticleParticleCollision.m in Sources */,
 				B57D414321A7755900ABA93B /* CollisionAlgorithm.m in Sources */,
+				B58869AA21C4501F00CE4C0E /* BattlePosition.m in Sources */,
 				B5849BCB21B5B8D600A87782 /* SimpleScene.m in Sources */,
 				B57D414B21A775AB00ABA93B /* ParticleAAHalfPlaneCollision.m in Sources */,
 				B57D413B21A7750D00ABA93B /* MovementPhysics.m in Sources */,
@@ -551,6 +562,7 @@
 				B57B0D3A21A613A30064B91F /* Lifetime.m in Sources */,
 				B5D0A40E21C3F4B9005EF3C6 /* TextureStretcher.m in Sources */,
 				B57D415121A775C700ABA93B /* AARectangleAAHalfPlaneCollision.m in Sources */,
+				B58869AD21C4607C00CE4C0E /* ResetableLifetime.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

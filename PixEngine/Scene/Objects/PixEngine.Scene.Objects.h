@@ -43,6 +43,7 @@
 // duration
 #import "ILifetime.h"
 #import "Lifetime.h"
+#import "ResetableLifetime.h"
 
 // manipulation
 #import "ISceneUser.h"
@@ -55,3 +56,4 @@
 #import "IExperienceGiver.h"
 #import "Entity.h"
 #import "DamageDealer.h"
+#import "BattlePosition.h"

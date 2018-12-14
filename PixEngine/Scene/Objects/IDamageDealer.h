@@ -8,9 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-#import "IDamageable.h"
-
-@protocol IDamageDealer <IDamageable>
+@protocol IDamageDealer <NSObject>
 
 @property (nonatomic) float damageStrength;
 
