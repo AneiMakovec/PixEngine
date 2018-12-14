@@ -6,4 +6,4 @@
 //  Copyright © 2018 Anei Makovec. All rights reserved.
 //
 
-@class Sprite, AnimatedSprite, AnimatedSpriteFrame;
+@class Sprite, AnimatedSprite, AnimatedSpriteFrame, TextureStretcher;
