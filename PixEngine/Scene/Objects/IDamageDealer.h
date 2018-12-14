@@ -14,7 +14,6 @@
 
 @property (nonatomic) float damageStrength;
 
-@optional
-- (void) dealDamageToTarget:(id<IDamageable>)target damage:(float)theDamage;
+- (void) dealDamageToTarget:(id<IDamageable>)target damage:(int)theDamage;
 
 @end

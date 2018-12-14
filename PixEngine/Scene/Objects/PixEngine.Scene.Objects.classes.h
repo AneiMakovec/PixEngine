@@ -32,5 +32,5 @@
 @protocol ISceneUser, ICustomUpdate;
 
 // combat
-@protocol IDamageable, IDamageDealer;
+@protocol IDamageable, IDamageDealer, IExperienceGainer, IExperienceGiver;
 @class Entity, DamageDealer;

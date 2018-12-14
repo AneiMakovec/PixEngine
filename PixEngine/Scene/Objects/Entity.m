@@ -10,7 +10,7 @@
 
 @implementation Entity
 
-- (id) initWithHealth:(float)hp {
+- (id) initWithHealth:(int)hp {
     self = [super init];
     if (self != nil) {
         position = [[Vector2 alloc] init];
@@ -23,7 +23,7 @@
 
 @synthesize position, velocity, maxHealthPoints, currentHealthPoints;
 
-- (void) takeDamage:(float)theDamage {
+- (void) takeDamage:(int)theDamage {
     currentHealthPoints += theDamage;
 }
 

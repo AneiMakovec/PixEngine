@@ -10,7 +10,7 @@
 
 @implementation DamageDealer
 
-- (id) initWithHealth:(float)hp damageStrength:(float)theDamageStrength {
+- (id) initWithHealth:(int)hp damageStrength:(float)theDamageStrength {
     self = [super initWithHealth:hp];
     if (self != nil) {
         damageStrength = theDamageStrength;
@@ -20,7 +20,7 @@
 
 @synthesize damageStrength;
 
-- (void) dealDamageToTarget:(id<IDamageable>)target damage:(float)theDamage {
+- (void) dealDamageToTarget:(id<IDamageable>)target damage:(int)theDamage {
     [target takeDamage:theDamage];
 }
 

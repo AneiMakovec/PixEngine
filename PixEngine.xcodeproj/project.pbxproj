@@ -132,6 +132,8 @@
 		B5D0A41F21C3FB14005EF3C6 /* IDamageDealer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDamageDealer.h; sourceTree = "<group>"; };
 		B5D0A42221C4024E005EF3C6 /* DamageDealer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DamageDealer.h; sourceTree = "<group>"; };
 		B5D0A42321C4024E005EF3C6 /* DamageDealer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DamageDealer.m; sourceTree = "<group>"; };
+		B5D0A42A21C412B3005EF3C6 /* IExperienceGainer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IExperienceGainer.h; sourceTree = "<group>"; };
+		B5D0A42B21C417BC005EF3C6 /* IExperienceGiver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IExperienceGiver.h; sourceTree = "<group>"; };
 		B5DE1258218DAA1A000D6784 /* PixEngine.Scene.Objects.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PixEngine.Scene.Objects.h; sourceTree = "<group>"; };
 		B5DE1259218DAA34000D6784 /* PixEngine.Scene.Objects.classes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PixEngine.Scene.Objects.classes.h; sourceTree = "<group>"; };
 		B5DE125A218DAA51000D6784 /* IPosition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IPosition.h; sourceTree = "<group>"; };
@@ -423,6 +425,8 @@
 			children = (
 				B5D0A41E21C3FAFA005EF3C6 /* IDamageable.h */,
 				B5D0A41F21C3FB14005EF3C6 /* IDamageDealer.h */,
+				B5D0A42A21C412B3005EF3C6 /* IExperienceGainer.h */,
+				B5D0A42B21C417BC005EF3C6 /* IExperienceGiver.h */,
 				B5D0A41B21C3FA57005EF3C6 /* Entity.h */,
 				B5D0A41C21C3FA57005EF3C6 /* Entity.m */,
 				B5D0A42221C4024E005EF3C6 /* DamageDealer.h */,

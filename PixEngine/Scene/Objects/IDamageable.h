@@ -10,10 +10,9 @@
 
 @protocol IDamageable <NSObject>
 
-@property (nonatomic) float maxHealthPoints;
-@property (nonatomic) float currentHealthPoints;
+@property (nonatomic) int maxHealthPoints;
+@property (nonatomic) int currentHealthPoints;
 
-@optional
-- (void) takeDamage:(float)theDamage;
+- (void) takeDamage:(int)theDamage;
 
 @end

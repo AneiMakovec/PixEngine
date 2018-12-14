@@ -17,7 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
     float damageStrength;
 }
 
-- (id) initWithHealth:(float)hp damageStrength:(float)theDamageStrength;
+- (id) initWithHealth:(int)hp damageStrength:(float)theDamageStrength;
 
 @end
 

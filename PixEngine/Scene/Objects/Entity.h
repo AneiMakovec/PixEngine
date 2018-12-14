@@ -16,11 +16,11 @@ NS_ASSUME_NONNULL_BEGIN
 @interface Entity : NSObject<IMovable, IDamageable> {
     Vector2 *position;
     Vector2 *velocity;
-    float maxHealthPoints;
-    float currentHealthPoints;
+    int maxHealthPoints;
+    int currentHealthPoints;
 }
 
-- (id) initWithHealth:(float)hp;
+- (id) initWithHealth:(int)hp;
 
 @end
 

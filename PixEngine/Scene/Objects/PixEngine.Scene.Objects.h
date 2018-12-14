@@ -51,5 +51,7 @@
 // combat
 #import "IDamageable.h"
 #import "IDamageDealer.h"
+#import "IExperienceGainer.h"
+#import "IExperienceGiver.h"
 #import "Entity.h"
 #import "DamageDealer.h"
