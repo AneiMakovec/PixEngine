@@ -24,6 +24,13 @@
 // composites
 @protocol IParticle, IAARectangle, ICircle;
 
-// other
-@protocol ILifetime, ISceneUser, ICustomUpdate;
+// duration
+@protocol ILifetime;
 @class LifeTime;
+
+// manipulation
+@protocol ISceneUser, ICustomUpdate;
+
+// combat
+@protocol IDamageable, IDamageDealer;
+@class Entity;

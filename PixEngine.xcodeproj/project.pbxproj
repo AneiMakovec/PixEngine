@@ -28,6 +28,8 @@
 		B5849BD221B5BA0500A87782 /* SceneEventArgs.m in Sources */ = {isa = PBXBuildFile; fileRef = B5849BD121B5BA0500A87782 /* SceneEventArgs.m */; };
 		B5C9FF4B21B4860A00B796F4 /* Random.m in Sources */ = {isa = PBXBuildFile; fileRef = B5C9FF4A21B4860A00B796F4 /* Random.m */; };
 		B5D0A40E21C3F4B9005EF3C6 /* TextureStretcher.m in Sources */ = {isa = PBXBuildFile; fileRef = B5D0A40D21C3F4B9005EF3C6 /* TextureStretcher.m */; };
+		B5D0A41D21C3FA57005EF3C6 /* Entity.m in Sources */ = {isa = PBXBuildFile; fileRef = B5D0A41C21C3FA57005EF3C6 /* Entity.m */; };
+		B5D0A42421C4024E005EF3C6 /* DamageDealer.m in Sources */ = {isa = PBXBuildFile; fileRef = B5D0A42321C4024E005EF3C6 /* DamageDealer.m */; };
 		B5E3802D2183B08D0007D013 /* Scene.m in Sources */ = {isa = PBXBuildFile; fileRef = B5E3802C2183B08D0007D013 /* Scene.m */; };
 		B5E3805D2183B4A90007D013 /* Sprite.m in Sources */ = {isa = PBXBuildFile; fileRef = B5E3805C2183B4A90007D013 /* Sprite.m */; };
 		B5E380602183B4B90007D013 /* AnimatedSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = B5E3805F2183B4B90007D013 /* AnimatedSprite.m */; };
@@ -122,6 +124,14 @@
 		B5C9FF4A21B4860A00B796F4 /* Random.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Random.m; sourceTree = "<group>"; };
 		B5D0A40C21C3F4B9005EF3C6 /* TextureStretcher.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TextureStretcher.h; sourceTree = "<group>"; };
 		B5D0A40D21C3F4B9005EF3C6 /* TextureStretcher.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TextureStretcher.m; sourceTree = "<group>"; };
+		B5D0A41621C3F774005EF3C6 /* PixEngine.Combat.classes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PixEngine.Combat.classes.h; sourceTree = "<group>"; };
+		B5D0A41721C3F78B005EF3C6 /* PixEngine.Combat.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PixEngine.Combat.h; sourceTree = "<group>"; };
+		B5D0A41B21C3FA57005EF3C6 /* Entity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Entity.h; sourceTree = "<group>"; };
+		B5D0A41C21C3FA57005EF3C6 /* Entity.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Entity.m; sourceTree = "<group>"; };
+		B5D0A41E21C3FAFA005EF3C6 /* IDamageable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDamageable.h; sourceTree = "<group>"; };
+		B5D0A41F21C3FB14005EF3C6 /* IDamageDealer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDamageDealer.h; sourceTree = "<group>"; };
+		B5D0A42221C4024E005EF3C6 /* DamageDealer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DamageDealer.h; sourceTree = "<group>"; };
+		B5D0A42321C4024E005EF3C6 /* DamageDealer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DamageDealer.m; sourceTree = "<group>"; };
 		B5DE1258218DAA1A000D6784 /* PixEngine.Scene.Objects.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PixEngine.Scene.Objects.h; sourceTree = "<group>"; };
 		B5DE1259218DAA34000D6784 /* PixEngine.Scene.Objects.classes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PixEngine.Scene.Objects.classes.h; sourceTree = "<group>"; };
 		B5DE125A218DAA51000D6784 /* IPosition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IPosition.h; sourceTree = "<group>"; };
@@ -173,6 +183,7 @@
 		B5689E8121839CDE0013719A /* PixEngine */ = {
 			isa = PBXGroup;
 			children = (
+				B5D0A40F21C3F720005EF3C6 /* Combat */,
 				B5C9FF4621B485C400B796F4 /* Utilities */,
 				B57B0D3D21A617FA0064B91F /* Math */,
 				B5E3802A2183B04B0007D013 /* Graphics */,
@@ -379,6 +390,47 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
+		B5D0A40F21C3F720005EF3C6 /* Combat */ = {
+			isa = PBXGroup;
+			children = (
+				B5D0A41721C3F78B005EF3C6 /* PixEngine.Combat.h */,
+				B5D0A41621C3F774005EF3C6 /* PixEngine.Combat.classes.h */,
+			);
+			path = Combat;
+			sourceTree = "<group>";
+		};
+		B5D0A41821C3F820005EF3C6 /* Manipulation */ = {
+			isa = PBXGroup;
+			children = (
+				B57B0D3B21A613B40064B91F /* ISceneUser.h */,
+				B57B0D3C21A613C20064B91F /* ICustomUpdate.h */,
+			);
+			name = Manipulation;
+			sourceTree = "<group>";
+		};
+		B5D0A41921C3F8B7005EF3C6 /* Duration */ = {
+			isa = PBXGroup;
+			children = (
+				B57B0D3721A613950064B91F /* ILifetime.h */,
+				B57B0D3821A613A30064B91F /* Lifetime.h */,
+				B57B0D3921A613A30064B91F /* Lifetime.m */,
+			);
+			name = Duration;
+			sourceTree = "<group>";
+		};
+		B5D0A41A21C3F8D7005EF3C6 /* Combat */ = {
+			isa = PBXGroup;
+			children = (
+				B5D0A41E21C3FAFA005EF3C6 /* IDamageable.h */,
+				B5D0A41F21C3FB14005EF3C6 /* IDamageDealer.h */,
+				B5D0A41B21C3FA57005EF3C6 /* Entity.h */,
+				B5D0A41C21C3FA57005EF3C6 /* Entity.m */,
+				B5D0A42221C4024E005EF3C6 /* DamageDealer.h */,
+				B5D0A42321C4024E005EF3C6 /* DamageDealer.m */,
+			);
+			name = Combat;
+			sourceTree = "<group>";
+		};
 		B5DE1257218DA97A000D6784 /* Objects */ = {
 			isa = PBXGroup;
 			children = (
@@ -390,11 +442,9 @@
 				B57B0D2621A6122C0064B91F /* Physical properties */,
 				B57B0D2B21A612820064B91F /* Colliders */,
 				B57B0D3321A613320064B91F /* Composites */,
-				B57B0D3721A613950064B91F /* ILifetime.h */,
-				B57B0D3821A613A30064B91F /* Lifetime.h */,
-				B57B0D3921A613A30064B91F /* Lifetime.m */,
-				B57B0D3B21A613B40064B91F /* ISceneUser.h */,
-				B57B0D3C21A613C20064B91F /* ICustomUpdate.h */,
+				B5D0A41821C3F820005EF3C6 /* Manipulation */,
+				B5D0A41921C3F8B7005EF3C6 /* Duration */,
+				B5D0A41A21C3F8D7005EF3C6 /* Combat */,
 			);
 			path = Objects;
 			sourceTree = "<group>";
@@ -472,11 +522,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5D0A41D21C3FA57005EF3C6 /* Entity.m in Sources */,
 				B57D414021A7754C00ABA93B /* Collision.m in Sources */,
 				B5E3802D2183B08D0007D013 /* Scene.m in Sources */,
 				B57D415421A775D400ABA93B /* AARectangleAARectangleCollision.m in Sources */,
 				B5849BCF21B5B97E00A87782 /* SceneAction.m in Sources */,
 				B57D415A21A775FB00ABA93B /* ParticleConvexCollision.m in Sources */,
+				B5D0A42421C4024E005EF3C6 /* DamageDealer.m in Sources */,
 				B57B0D4721A61A8A0064B91F /* HalfPlane.m in Sources */,
 				B5E3805D2183B4A90007D013 /* Sprite.m in Sources */,
 				B57D415721A775ED00ABA93B /* ParticleHalfPlaneCollision.m in Sources */,

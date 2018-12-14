@@ -40,8 +40,15 @@
 #import "IAARectangle.h"
 #import "ICircle.h"
 
-// other
+// duration
 #import "ILifetime.h"
 #import "Lifetime.h"
+
+// manipulation
 #import "ISceneUser.h"
 #import "ICustomUpdate.h"
+
+// combat
+#import "IDamageable.h"
+#import "IDamageDealer.h"
+#import "Entity.h"
