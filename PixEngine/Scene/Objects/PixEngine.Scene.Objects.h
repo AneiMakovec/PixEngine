@@ -52,3 +52,4 @@
 #import "IDamageable.h"
 #import "IDamageDealer.h"
 #import "Entity.h"
+#import "DamageDealer.h"

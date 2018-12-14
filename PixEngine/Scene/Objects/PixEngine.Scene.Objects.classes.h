@@ -33,4 +33,4 @@
 
 // combat
 @protocol IDamageable, IDamageDealer;
-@class Entity;
+@class Entity, DamageDealer;
