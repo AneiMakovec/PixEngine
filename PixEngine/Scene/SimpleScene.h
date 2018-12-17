@@ -10,6 +10,8 @@
 
 #import "PixEngine.Scene.classes.h"
 
+#import "IScene.h"
+
 NS_ASSUME_NONNULL_BEGIN
 
 /**
