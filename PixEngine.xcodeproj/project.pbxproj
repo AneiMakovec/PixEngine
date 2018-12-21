@@ -36,6 +36,7 @@
 		B5E3805D2183B4A90007D013 /* Sprite.m in Sources */ = {isa = PBXBuildFile; fileRef = B5E3805C2183B4A90007D013 /* Sprite.m */; };
 		B5E380602183B4B90007D013 /* AnimatedSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = B5E3805F2183B4B90007D013 /* AnimatedSprite.m */; };
 		B5E380632183B4C80007D013 /* AnimatedSpriteFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = B5E380622183B4C80007D013 /* AnimatedSpriteFrame.m */; };
+		B5FE06EB21CC730200038407 /* PrimitiveBatch.m in Sources */ = {isa = PBXBuildFile; fileRef = B5FE06EA21CC730200038407 /* PrimitiveBatch.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -155,6 +156,10 @@
 		B5E3805F2183B4B90007D013 /* AnimatedSprite.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnimatedSprite.m; sourceTree = "<group>"; };
 		B5E380612183B4C80007D013 /* AnimatedSpriteFrame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnimatedSpriteFrame.h; sourceTree = "<group>"; };
 		B5E380622183B4C80007D013 /* AnimatedSpriteFrame.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnimatedSpriteFrame.m; sourceTree = "<group>"; };
+		B5FE06E921CC730200038407 /* PrimitiveBatch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrimitiveBatch.h; sourceTree = "<group>"; };
+		B5FE06EA21CC730200038407 /* PrimitiveBatch.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PrimitiveBatch.m; sourceTree = "<group>"; };
+		B5FE06EC21CC731E00038407 /* PixEngine.Graphics.Primitive.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PixEngine.Graphics.Primitive.h; sourceTree = "<group>"; };
+		B5FE06ED21CC733800038407 /* PixEngine.Graphics.Primitive.classes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PixEngine.Graphics.Primitive.classes.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -468,6 +473,7 @@
 			children = (
 				B5E380332183B19B0007D013 /* PixEngine.Graphics.h */,
 				B5E380342183B1AB0007D013 /* PixEngine.Graphics.classes.h */,
+				B5FE06E821CC72E400038407 /* Primitive */,
 				B5E3805B2183B4A90007D013 /* Sprite.h */,
 				B5E3805C2183B4A90007D013 /* Sprite.m */,
 				B5E3805E2183B4B90007D013 /* AnimatedSprite.h */,
@@ -478,6 +484,17 @@
 				B5D0A40D21C3F4B9005EF3C6 /* TextureStretcher.m */,
 			);
 			path = Graphics;
+			sourceTree = "<group>";
+		};
+		B5FE06E821CC72E400038407 /* Primitive */ = {
+			isa = PBXGroup;
+			children = (
+				B5FE06EC21CC731E00038407 /* PixEngine.Graphics.Primitive.h */,
+				B5FE06ED21CC733800038407 /* PixEngine.Graphics.Primitive.classes.h */,
+				B5FE06E921CC730200038407 /* PrimitiveBatch.h */,
+				B5FE06EA21CC730200038407 /* PrimitiveBatch.m */,
+			);
+			path = Primitive;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -554,6 +571,7 @@
 				B57D414321A7755900ABA93B /* CollisionAlgorithm.m in Sources */,
 				B58869AA21C4501F00CE4C0E /* BattlePosition.m in Sources */,
 				B5849BCB21B5B8D600A87782 /* SimpleScene.m in Sources */,
+				B5FE06EB21CC730200038407 /* PrimitiveBatch.m in Sources */,
 				B57D414B21A775AB00ABA93B /* ParticleAAHalfPlaneCollision.m in Sources */,
 				B57D413B21A7750D00ABA93B /* MovementPhysics.m in Sources */,
 				B57D414E21A775B800ABA93B /* ParticleAARectangleCollision.m in Sources */,
