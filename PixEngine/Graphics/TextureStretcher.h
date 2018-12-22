@@ -21,9 +21,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (id) initFromWidth:(float)widthFrom fromHeight:(float)heightFrom toWidth:(float)widthTo toHeight:(float)heightTo xOffset:(int)theXoffset yOffset:(int)theYoffset;
 
-- (void) scaleVector:(Vector2 *)theVector;
-
 - (void) scalePosition:(Vector2 *)thePosition;
+
+- (void) scaleRectangle:(Rectangle *)theRect;
 
 - (void) scaleSize:(Vector2 *)theSize;
 

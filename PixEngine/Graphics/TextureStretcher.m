@@ -36,6 +36,22 @@
     [thePosition add:[Vector2 vectorWithX:xOffset y:yOffset]];
 }
 
+- (void) scaleRectangle:(Rectangle *)theRect {
+    Vector2 *position = [[Vector2 alloc] initWithX:theRect.x y:theRect.y];
+    Vector2 *size = [[Vector2 alloc] initWithX:theRect.width y:theRect.height];
+    
+    [self scalePosition:position];
+    [self scaleVector:size];
+    
+    theRect.x = position.x;
+    theRect.y = position.y;
+    theRect.width = size.x;
+    theRect.height = size.y;
+    
+    [position release];
+    [size release];
+}
+
 - (void) scaleSize:(Vector2 *)theSize {
     [self scaleVector:theSize];
 }
