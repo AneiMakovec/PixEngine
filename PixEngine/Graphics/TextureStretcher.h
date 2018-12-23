@@ -27,6 +27,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void) scaleSize:(Vector2 *)theSize;
 
+- (float) scaleX:(float)theX;
+
+- (float) scaleY:(float)theY;
+
+
+
+
 + (void) scaleVector:(Vector2 *)theVector fromWidth:(float)widthFrom fromHeight:(float)heightFrom toWidth:(float)widthTo toHeight:(float)heightTo;
 
 + (float) scaleX:(float)theX fromWidth:(float)widthFrom toWidth:(float)widthTo;

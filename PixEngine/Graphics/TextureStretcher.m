@@ -10,6 +10,7 @@
 
 @implementation TextureStretcher
 
+
 - (id) initFromWidth:(float)widthFrom fromHeight:(float)heightFrom toWidth:(float)widthTo toHeight:(float)heightTo xOffset:(int)theXoffset yOffset:(int)theYoffset {
     self = [super init];
     if (self != nil) {
@@ -55,6 +56,17 @@
 - (void) scaleSize:(Vector2 *)theSize {
     [self scaleVector:theSize];
 }
+
+- (float) scaleX:(float)theX {
+    return (theX * toWidth) / fromWidth + xOffset;
+}
+
+- (float) scaleY:(float)theY {
+    return (theY * toHeight) / fromHeight + yOffset;
+}
+
+
+
 
 + (void) scaleVector:(Vector2 *)theVector fromWidth:(float)widthFrom fromHeight:(float)heightFrom toWidth:(float)widthTo toHeight:(float)heightTo {
     float scaleX = widthTo / widthFrom;
