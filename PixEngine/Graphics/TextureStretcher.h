@@ -15,11 +15,11 @@ NS_ASSUME_NONNULL_BEGIN
     float fromHeight;
     float toWidth;
     float toHeight;
-    int xOffset;
-    int yOffset;
+    float xOffset;
+    float yOffset;
 }
 
-- (id) initFromWidth:(float)widthFrom fromHeight:(float)heightFrom toWidth:(float)widthTo toHeight:(float)heightTo xOffset:(int)theXoffset yOffset:(int)theYoffset;
+- (id) initFromWidth:(float)widthFrom fromHeight:(float)heightFrom toWidth:(float)widthTo toHeight:(float)heightTo xOffset:(float)theXoffset yOffset:(float)theYoffset;
 
 - (void) scalePosition:(Vector2 *)thePosition;
 

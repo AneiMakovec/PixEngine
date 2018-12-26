@@ -11,7 +11,7 @@
 @implementation TextureStretcher
 
 
-- (id) initFromWidth:(float)widthFrom fromHeight:(float)heightFrom toWidth:(float)widthTo toHeight:(float)heightTo xOffset:(int)theXoffset yOffset:(int)theYoffset {
+- (id) initFromWidth:(float)widthFrom fromHeight:(float)heightFrom toWidth:(float)widthTo toHeight:(float)heightTo xOffset:(float)theXoffset yOffset:(float)theYoffset {
     self = [super init];
     if (self != nil) {
         fromWidth = widthFrom;
