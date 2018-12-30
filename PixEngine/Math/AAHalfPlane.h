@@ -2,8 +2,8 @@
 //  AAHalfPlane.h
 //  PixEngine
 //
-//  Created by Anei Makovec on 21/11/2018.
-//  Copyright © 2018 Anei Makovec. All rights reserved.
+//  Created by Matej Jan on 10.11.10.
+//  Copyright 2010 Retronator. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

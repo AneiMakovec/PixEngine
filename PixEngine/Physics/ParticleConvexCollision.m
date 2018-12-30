@@ -2,8 +2,8 @@
 //  ParticleConvexCollision.m
 //  PixEngine
 //
-//  Created by Anei Makovec on 23/11/2018.
-//  Copyright © 2018 Anei Makovec. All rights reserved.
+//  Created by Matej Jan on 4.11.10.
+//  Copyright 2010 Retronator. All rights reserved.
 //
 
 #import "ParticleConvexCollision.h"

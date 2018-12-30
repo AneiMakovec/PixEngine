@@ -2,8 +2,8 @@
 //  SceneAction.m
 //  PixEngine
 //
-//  Created by Anei Makovec on 03/12/2018.
-//  Copyright © 2018 Anei Makovec. All rights reserved.
+//  Created by Matej Jan on 23.11.10.
+//  Copyright 2010 Retronator. All rights reserved.
 //
 
 #import "SceneAction.h"

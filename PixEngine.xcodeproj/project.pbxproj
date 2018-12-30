@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B55FA71B21D7DFDA00526790 /* GridScene.m in Sources */ = {isa = PBXBuildFile; fileRef = B55FA71A21D7DFDA00526790 /* GridScene.m */; };
+		B55FA72221D7F1E000526790 /* Label.m in Sources */ = {isa = PBXBuildFile; fileRef = B55FA72121D7F1E000526790 /* Label.m */; };
+		B55FA72521D7F24C00526790 /* Image.m in Sources */ = {isa = PBXBuildFile; fileRef = B55FA72421D7F24C00526790 /* Image.m */; };
+		B55FA72F21D8151400526790 /* Button.m in Sources */ = {isa = PBXBuildFile; fileRef = B55FA72E21D8151400526790 /* Button.m */; };
+		B55FA73321D815CE00526790 /* TouchPanelHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = B55FA73221D815CE00526790 /* TouchPanelHelper.m */; };
+		B55FA73821D816CC00526790 /* Rectangle+extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = B55FA73721D816CC00526790 /* Rectangle+extensions.m */; };
 		B5689E8D21839CFA0013719A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5689E8C21839CFA0013719A /* Foundation.framework */; };
 		B5689E8F21839D080013719A /* libXNI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B5689E8E21839D080013719A /* libXNI.a */; };
 		B57B0D3A21A613A30064B91F /* Lifetime.m in Sources */ = {isa = PBXBuildFile; fileRef = B57B0D3921A613A30064B91F /* Lifetime.m */; };
@@ -52,6 +58,23 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B55FA71921D7DFDA00526790 /* GridScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GridScene.h; sourceTree = "<group>"; };
+		B55FA71A21D7DFDA00526790 /* GridScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GridScene.m; sourceTree = "<group>"; };
+		B55FA71D21D7F15A00526790 /* PixEngine.GUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PixEngine.GUI.h; sourceTree = "<group>"; };
+		B55FA71E21D7F17100526790 /* PixEngine.GUI.classes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PixEngine.GUI.classes.h; sourceTree = "<group>"; };
+		B55FA71F21D7F1B700526790 /* GUIEnums.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GUIEnums.h; sourceTree = "<group>"; };
+		B55FA72021D7F1E000526790 /* Label.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Label.h; sourceTree = "<group>"; };
+		B55FA72121D7F1E000526790 /* Label.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Label.m; sourceTree = "<group>"; };
+		B55FA72321D7F24C00526790 /* Image.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Image.h; sourceTree = "<group>"; };
+		B55FA72421D7F24C00526790 /* Image.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Image.m; sourceTree = "<group>"; };
+		B55FA72D21D8151400526790 /* Button.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Button.h; sourceTree = "<group>"; };
+		B55FA72E21D8151400526790 /* Button.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Button.m; sourceTree = "<group>"; };
+		B55FA73121D815CE00526790 /* TouchPanelHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TouchPanelHelper.h; sourceTree = "<group>"; };
+		B55FA73221D815CE00526790 /* TouchPanelHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TouchPanelHelper.m; sourceTree = "<group>"; };
+		B55FA73421D8163200526790 /* PixEngine.Control.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PixEngine.Control.h; sourceTree = "<group>"; };
+		B55FA73521D8164700526790 /* PixEngine.Control.classes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PixEngine.Control.classes.h; sourceTree = "<group>"; };
+		B55FA73621D816CC00526790 /* Rectangle+extensions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Rectangle+extensions.h"; sourceTree = "<group>"; };
+		B55FA73721D816CC00526790 /* Rectangle+extensions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Rectangle+extensions.m"; sourceTree = "<group>"; };
 		B5689E7F21839CDE0013719A /* libPixEngine.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPixEngine.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5689E8C21839CFA0013719A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B5689E8E21839D080013719A /* libXNI.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libXNI.a; path = ../XNI/libXNI.a; sourceTree = "<group>"; };
@@ -175,6 +198,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B55FA71C21D7F13D00526790 /* GUI */ = {
+			isa = PBXGroup;
+			children = (
+				B55FA71D21D7F15A00526790 /* PixEngine.GUI.h */,
+				B55FA71E21D7F17100526790 /* PixEngine.GUI.classes.h */,
+				B55FA71F21D7F1B700526790 /* GUIEnums.h */,
+				B55FA72021D7F1E000526790 /* Label.h */,
+				B55FA72121D7F1E000526790 /* Label.m */,
+				B55FA72321D7F24C00526790 /* Image.h */,
+				B55FA72421D7F24C00526790 /* Image.m */,
+				B55FA72D21D8151400526790 /* Button.h */,
+				B55FA72E21D8151400526790 /* Button.m */,
+			);
+			path = GUI;
+			sourceTree = "<group>";
+		};
+		B55FA73021D815AD00526790 /* Control */ = {
+			isa = PBXGroup;
+			children = (
+				B55FA73421D8163200526790 /* PixEngine.Control.h */,
+				B55FA73521D8164700526790 /* PixEngine.Control.classes.h */,
+				B55FA73121D815CE00526790 /* TouchPanelHelper.h */,
+				B55FA73221D815CE00526790 /* TouchPanelHelper.m */,
+			);
+			path = Control;
+			sourceTree = "<group>";
+		};
 		B5689E7621839CDE0013719A = {
 			isa = PBXGroup;
 			children = (
@@ -198,8 +248,10 @@
 			children = (
 				B5D0A40F21C3F720005EF3C6 /* Combat */,
 				B5C9FF4621B485C400B796F4 /* Utilities */,
+				B55FA73021D815AD00526790 /* Control */,
 				B57B0D3D21A617FA0064B91F /* Math */,
 				B5E3802A2183B04B0007D013 /* Graphics */,
+				B55FA71C21D7F13D00526790 /* GUI */,
 				B5689E9321839DA00013719A /* UI */,
 				B5689E9221839D940013719A /* Scene */,
 				B5689E9121839D890013719A /* Physics */,
@@ -251,6 +303,8 @@
 				B5849BCE21B5B97E00A87782 /* SceneAction.m */,
 				B5849BD021B5BA0500A87782 /* SceneEventArgs.h */,
 				B5849BD121B5BA0500A87782 /* SceneEventArgs.m */,
+				B55FA71921D7DFDA00526790 /* GridScene.h */,
+				B55FA71A21D7DFDA00526790 /* GridScene.m */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -399,6 +453,8 @@
 				B5C9FF4721B485E700B796F4 /* PixEngine.Utilities.classes.h */,
 				B5C9FF4921B4860A00B796F4 /* Random.h */,
 				B5C9FF4A21B4860A00B796F4 /* Random.m */,
+				B55FA73621D816CC00526790 /* Rectangle+extensions.h */,
+				B55FA73721D816CC00526790 /* Rectangle+extensions.m */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -556,12 +612,15 @@
 				B5D0A41D21C3FA57005EF3C6 /* Entity.m in Sources */,
 				B57D414021A7754C00ABA93B /* Collision.m in Sources */,
 				B5E3802D2183B08D0007D013 /* Scene.m in Sources */,
+				B55FA71B21D7DFDA00526790 /* GridScene.m in Sources */,
 				B57D415421A775D400ABA93B /* AARectangleAARectangleCollision.m in Sources */,
 				B5849BCF21B5B97E00A87782 /* SceneAction.m in Sources */,
 				B57D415A21A775FB00ABA93B /* ParticleConvexCollision.m in Sources */,
 				B5D0A42421C4024E005EF3C6 /* DamageDealer.m in Sources */,
 				B57B0D4721A61A8A0064B91F /* HalfPlane.m in Sources */,
 				B5E3805D2183B4A90007D013 /* Sprite.m in Sources */,
+				B55FA73321D815CE00526790 /* TouchPanelHelper.m in Sources */,
+				B55FA72521D7F24C00526790 /* Image.m in Sources */,
 				B57D415721A775ED00ABA93B /* ParticleHalfPlaneCollision.m in Sources */,
 				B5849BD221B5BA0500A87782 /* SceneEventArgs.m in Sources */,
 				B5E380632183B4C80007D013 /* AnimatedSpriteFrame.m in Sources */,
@@ -570,6 +629,7 @@
 				B57D414621A7757500ABA93B /* ParticleParticleCollision.m in Sources */,
 				B57D414321A7755900ABA93B /* CollisionAlgorithm.m in Sources */,
 				B58869AA21C4501F00CE4C0E /* BattlePosition.m in Sources */,
+				B55FA72221D7F1E000526790 /* Label.m in Sources */,
 				B5849BCB21B5B8D600A87782 /* SimpleScene.m in Sources */,
 				B5FE06EB21CC730200038407 /* PrimitiveBatch.m in Sources */,
 				B57D414B21A775AB00ABA93B /* ParticleAAHalfPlaneCollision.m in Sources */,
@@ -581,6 +641,8 @@
 				B5D0A40E21C3F4B9005EF3C6 /* TextureStretcher.m in Sources */,
 				B57D415121A775C700ABA93B /* AARectangleAAHalfPlaneCollision.m in Sources */,
 				B58869AD21C4607C00CE4C0E /* ResetableLifetime.m in Sources */,
+				B55FA72F21D8151400526790 /* Button.m in Sources */,
+				B55FA73821D816CC00526790 /* Rectangle+extensions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

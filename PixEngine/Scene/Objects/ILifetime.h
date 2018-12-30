@@ -2,8 +2,8 @@
 //  ILifetime.h
 //  PixEngine
 //
-//  Created by Anei Makovec on 21/11/2018.
-//  Copyright © 2018 Anei Makovec. All rights reserved.
+//  Created by Matej Jan on 27.10.10.
+//  Copyright 2010 Retronator. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

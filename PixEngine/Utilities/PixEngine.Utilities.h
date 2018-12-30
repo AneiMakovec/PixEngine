@@ -7,3 +7,5 @@
 //
 
 #import "Random.h"
+
+#import "Rectangle+extensions.h"

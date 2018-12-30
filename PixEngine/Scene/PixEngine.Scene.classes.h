@@ -8,4 +8,4 @@
 
 @protocol IScene;
 
-@class Scene, SimpleScene, SceneAction, SceneEventArgs;
+@class Scene, SimpleScene, SceneAction, SceneEventArgs, GridScene;
