@@ -18,6 +18,8 @@
         texture = [theTexture retain];
         position = [thePosition retain];
         
+        drawToRectangle = NO;
+        
         color = [[Color white] retain];
         origin = [[Vector2 zero] retain];
         scale = [[Vector2 one] retain];
@@ -25,7 +27,22 @@
     return self;
 }
 
-@synthesize texture, sourceRectangle, color, position, origin, scale, rotation, layerDepth;
+- (id) initWithTexture:(Texture2D *)theTexture toRectangle:(Rectangle *)rectangle {
+    self = [super init];
+    if (self != nil) {
+        texture = [theTexture retain];
+        drawRectangle = [rectangle retain];
+        
+        drawToRectangle = YES;
+        
+        color = [[Color white] retain];
+        origin = [[Vector2 zero] retain];
+        scale = [[Vector2 one] retain];
+    }
+    return self;
+}
+
+@synthesize texture, sourceRectangle, drawRectangle, color, position, origin, scale, rotation, layerDepth, drawToRectangle;
 
 - (void) setScaleUniform:(float)value {
     scale.x = value;

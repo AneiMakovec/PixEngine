@@ -14,6 +14,8 @@ NS_ASSUME_NONNULL_BEGIN
     Texture2D *texture;
     Rectangle *sourceRectangle;
     
+    Rectangle *drawRectangle;
+    
     Color *color;
     
     Vector2 *position;
@@ -22,12 +24,18 @@ NS_ASSUME_NONNULL_BEGIN
     
     float rotation;
     float layerDepth;
+    
+    BOOL drawToRectangle;
 }
 
 - (id) initWithTexture:(Texture2D*)theTexture position:(Vector2*)thePosition;
 
+- (id) initWithTexture:(Texture2D *)theTexture toRectangle:(Rectangle*)rectangle;
+
 @property (nonatomic, retain) Texture2D *texture;
 @property (nonatomic, retain) Rectangle *sourceRectangle;
+
+@property (nonatomic, retain) Rectangle *drawRectangle;
 
 @property (nonatomic, retain) Color *color;
 
@@ -37,6 +45,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic) float rotation;
 @property (nonatomic) float layerDepth;
+
+@property (nonatomic, readonly) BOOL drawToRectangle;
 
 - (void) setScaleUniform:(float)value;
 

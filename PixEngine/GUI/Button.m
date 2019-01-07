@@ -23,14 +23,17 @@
         inputArea = [theInputArea retain];
         enabled = YES;
         
-        backgroundImage = [[Image alloc] initWithTexture:background position:[Vector2 vectorWithX:inputArea.x y:inputArea.y]];
+        backgroundImage = [[Image alloc] initWithTexture:background toRectangle:inputArea];
         label = [[Label alloc] initWithFont:font
                                        text:text
-                                   position:[Vector2 vectorWithX:inputArea.x + 10 y:inputArea.y + inputArea.height/2]];
+                                   position:[Vector2 vectorWithX:inputArea.x + inputArea.width/2 y:inputArea.y + inputArea.height/2]];
         label.verticalAlign = VerticalAlignMiddle;
+        label.horizontalAlign = HorizontalAlignCenter;
         
-        self.backgroundColor = [Color white];
-        self.backgroundHoverColor = [Color dimGray];
+        if (background) {
+            self.backgroundColor = [Color white];
+            self.backgroundHoverColor = [Color dimGray];
+        }
         
         self.labelColor = [Color black];
         self.labelHoverColor = [Color white];
