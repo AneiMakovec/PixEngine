@@ -11,3 +11,5 @@
 #import "Label.h"
 #import "Image.h"
 #import "Button.h"
+#import "GuiPanel.h"
+#import "Window.h"
