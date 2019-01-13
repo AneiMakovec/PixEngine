@@ -262,7 +262,6 @@
 				B57B0D3D21A617FA0064B91F /* Math */,
 				B5E3802A2183B04B0007D013 /* Graphics */,
 				B55FA71C21D7F13D00526790 /* GUI */,
-				B5689E9321839DA00013719A /* UI */,
 				B5689E9221839D940013719A /* Scene */,
 				B5689E9121839D890013719A /* Physics */,
 				B5689E9021839D650013719A /* AI */,
@@ -317,13 +316,6 @@
 				B55FA71A21D7DFDA00526790 /* GridScene.m */,
 			);
 			path = Scene;
-			sourceTree = "<group>";
-		};
-		B5689E9321839DA00013719A /* UI */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = UI;
 			sourceTree = "<group>";
 		};
 		B57B0D1B21A611650064B91F /* Movement */ = {
