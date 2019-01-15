@@ -10,8 +10,6 @@
 
 @protocol IExperienceGiver <NSObject>
 
-@property (nonatomic) int expWorth;
-
 - (int) giveExperience;
 
 @end

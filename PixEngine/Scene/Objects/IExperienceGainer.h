@@ -13,6 +13,7 @@
 @property (nonatomic) int currentLevel;
 @property (nonatomic) int maxLevel;
 @property (nonatomic) int exp;
+@property (nonatomic) int currentExp;
 
 - (void) gainExperience:(int)theExp;
 - (void) levelUp;

@@ -49,6 +49,12 @@
     scale.y = value;
 }
 
+- (void) setTexture:(Texture2D *)theTexture {
+    [theTexture retain];
+    [texture release];
+    texture = theTexture;
+}
+
 - (void) dealloc
 {
     [texture release];

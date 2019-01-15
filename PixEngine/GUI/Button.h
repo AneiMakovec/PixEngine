@@ -56,6 +56,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void) updateWithInverseView:(Matrix*)inverseView;
 
+- (void) setBackground:(Texture2D*)background;
+
 @end
 
 NS_ASSUME_NONNULL_END

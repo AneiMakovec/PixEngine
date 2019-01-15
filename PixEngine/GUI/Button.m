@@ -59,6 +59,10 @@
     backgroundImage.color = backgroundColor;
 }
 
+- (void) setBackground:(Texture2D *)background {
+    [backgroundImage setTexture:background];
+}
+
 - (void) addedToScene:(id <IScene>)theScene {
     // Add child items to scene.
     [theScene addItem:backgroundImage];
