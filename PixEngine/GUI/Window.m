@@ -12,7 +12,7 @@
 
 @implementation Window
 
-- (id) initWithScene:(id)theScene camera:(Matrix*)camera x:(int)x y:(int)y width:(int)width height:(int)height closeButtonBakground:(Texture2D *)backButtonBackground font:(SpriteFont *)font {
+- (id) initWithScene:(id)theScene camera:(Matrix*)camera x:(int)x y:(int)y width:(int)width height:(int)height closeButtonBakground:(Texture2D *)backButtonBackground {
     if (width < 50)
         width = 50;
     
@@ -21,7 +21,7 @@
     
     self = [super initWithScene:theScene camera:camera x:x y:y width:width height:height];
     if (self != nil) {
-        close = [[Button alloc] initWithInputArea:[Rectangle rectangleWithX:x+width-15 y:5 width:10 height:10] background:backButtonBackground font:font text:@"X"];
+        close = [[ImageButton alloc] initWithInputArea:[Rectangle rectangleWithX:x+width-15 y:5 width:10 height:10] background:backButtonBackground];
         
         [items addObject:close];
     }

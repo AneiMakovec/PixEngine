@@ -8,4 +8,4 @@
 
 #import "GUIEnums.h"
 
-@class Label, Image, Button, GuiPanel, Window;
+@class Label, Image, Button, ImageButton, LabelButton, ImageLabelButton, GuiPanel, Window;

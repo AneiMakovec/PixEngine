@@ -12,67 +12,23 @@
 
 @implementation Button
 
-- (id) initWithInputArea:(Rectangle*)theInputArea
-              background:(Texture2D*)background
-                    font:(SpriteFont*)font
-                    text:(NSString*)text
-{
+- (id) initWithInputArea:(Rectangle*)theInputArea {
     self = [super init];
     if (self != nil) {
-        
         inputArea = [theInputArea retain];
         enabled = YES;
-        
-        backgroundImage = [[Image alloc] initWithTexture:background toRectangle:inputArea];
-        label = [[Label alloc] initWithFont:font
-                                       text:text
-                                   position:[Vector2 vectorWithX:inputArea.x + inputArea.width/2 y:inputArea.y + inputArea.height/2]];
-        label.verticalAlign = VerticalAlignMiddle;
-        label.horizontalAlign = HorizontalAlignCenter;
-        
-        if (background) {
-            self.backgroundColor = [Color white];
-            self.backgroundHoverColor = [Color dimGray];
-        }
-        
-        self.labelColor = [Color black];
-        self.labelHoverColor = [Color white];
-        
     }
     return self;
 }
 
-@synthesize inputArea, enabled, isDown, wasPressed, wasReleased, scene, backgroundImage, label;
-@synthesize labelColor, labelHoverColor, backgroundColor, backgroundHoverColor;
-
-- (void) setLabelColor:(Color *)value {
-    [value retain];
-    [labelColor release];
-    labelColor = value;
-    label.color = labelColor;
-}
-
-- (void) setBackgroundColor:(Color *)value {
-    [value retain];
-    [backgroundColor release];
-    backgroundColor = value;
-    backgroundImage.color = backgroundColor;
-}
-
-- (void) setBackground:(Texture2D *)background {
-    [backgroundImage setTexture:background];
-}
+@synthesize inputArea, enabled, isDown, wasPressed, wasReleased, scene;
 
 - (void) addedToScene:(id <IScene>)theScene {
-    // Add child items to scene.
-    [theScene addItem:backgroundImage];
-    [theScene addItem:label];
+    // Override in child implementations
 }
 
 - (void) removedFromScene:(id <IScene>)theScene {
-    // Remove child items.
-    [theScene removeItem:backgroundImage];
-    [theScene removeItem:label];
+    // Override in child implementations
 }
 
 - (void) updateWithInverseView:(Matrix *)inverseView  {
@@ -84,9 +40,7 @@
     if (!touches) {
         return;
     }
-    
-    BOOL wasDown = isDown;
-    
+
     isDown = NO;
     wasPressed = NO;
     wasReleased = NO;
@@ -110,20 +64,9 @@
             }
         }
     }
-    
-    if (isDown && !wasDown) {
-        backgroundImage.color = backgroundHoverColor;
-        label.color = labelHoverColor;
-    } else if (!isDown && wasDown) {
-        backgroundImage.color = backgroundColor;
-        label.color = labelColor;
-    }
 }
 
-- (void) dealloc
-{
-    [backgroundImage release];
-    [label release];
+- (void) dealloc {
     [inputArea release];
     [super dealloc];
 }

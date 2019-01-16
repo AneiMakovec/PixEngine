@@ -15,10 +15,10 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface Window : GuiPanel {
-    Button *close;
+    ImageButton *close;
 }
 
-- (id) initWithScene:(id<IScene>)theScene camera:(Matrix*)camera x:(int)x y:(int)y width:(int)width height:(int)weight closeButtonBakground:(Texture2D*)backButtonBackground font:(SpriteFont*)font;
+- (id) initWithScene:(id<IScene>)theScene camera:(Matrix*)camera x:(int)x y:(int)y width:(int)width height:(int)weight closeButtonBakground:(Texture2D*)backButtonBackground;
 
 @end
 
