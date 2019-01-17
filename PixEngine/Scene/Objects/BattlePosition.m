@@ -19,6 +19,15 @@
     return self;
 }
 
+- (id) initWithPosition:(Vector2 *)thePosition radius:(float)theRadius {
+    self = [super init];
+    if (self != nil) {
+        position = [thePosition retain];
+        radius = theRadius;
+    }
+    return self;
+}
+
 @synthesize position, radius;
 
 @end

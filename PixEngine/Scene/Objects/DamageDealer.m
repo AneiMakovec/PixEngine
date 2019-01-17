@@ -24,4 +24,8 @@
     [target takeDamage:theDamage];
 }
 
+- (void) healTarget:(id<IDamageable>)target amount:(int)amount {
+    [target heal:amount];
+}
+
 @end

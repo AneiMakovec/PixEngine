@@ -24,7 +24,13 @@
 @synthesize position, velocity, maxHealthPoints, currentHealthPoints;
 
 - (void) takeDamage:(int)theDamage {
-    currentHealthPoints += theDamage;
+    currentHealthPoints -= theDamage;
 }
 
+- (void) heal:(int)amount {
+    if (currentHealthPoints < maxHealthPoints) {
+        currentHealthPoints += amount;
+    }
+}
+   
 @end

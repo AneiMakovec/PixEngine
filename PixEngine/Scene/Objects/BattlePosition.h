@@ -19,6 +19,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (id) initWithRadius:(float)theRadius;
 
+- (id) initWithPosition:(Vector2*)thePosition radius:(float)theRadius;
+
 @end
 
 NS_ASSUME_NONNULL_END

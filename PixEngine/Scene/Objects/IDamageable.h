@@ -17,4 +17,6 @@
 
 - (void) takeDamage:(int)theDamage;
 
+- (void) heal:(int)amount;
+
 @end
