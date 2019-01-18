@@ -27,10 +27,28 @@
     currentHealthPoints -= theDamage;
 }
 
+- (void) takePercentDamage:(float)theDamage {
+    float percent = 1.0f - theDamage;
+    currentHealthPoints *= percent;
+}
+
 - (void) heal:(int)amount {
     if (currentHealthPoints < maxHealthPoints) {
         currentHealthPoints += amount;
+        
+        if (currentHealthPoints > maxHealthPoints)
+            currentHealthPoints = maxHealthPoints;
     }
+}
+
+- (int) healPercent:(float)heal {
+    int amount = (float)maxHealthPoints * heal;
+    
+    if (currentHealthPoints < maxHealthPoints) {
+        [self heal:amount];
+    }
+    
+    return amount;
 }
    
 @end

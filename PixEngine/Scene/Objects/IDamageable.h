@@ -16,7 +16,9 @@
 @property (nonatomic) int currentHealthPoints;
 
 - (void) takeDamage:(int)theDamage;
+- (void) takePercentDamage:(float)theDamage;
 
 - (void) heal:(int)amount;
+- (int) healPercent:(float)heal;
 
 @end

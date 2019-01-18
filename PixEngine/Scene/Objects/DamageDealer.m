@@ -28,4 +28,8 @@
     [target heal:amount];
 }
 
+- (int) healPercentTarget:(id<IDamageable>)target amount:(float)amount {
+    return [target healPercent:amount];
+}
+
 @end

@@ -15,5 +15,6 @@
 - (void) dealDamageToTarget:(id<IDamageable>)target damage:(int)theDamage;
 
 - (void) healTarget:(id<IDamageable>)target amount:(int)amount;
+- (int) healPercentTarget:(id<IDamageable>)target amount:(float)amount;
 
 @end
