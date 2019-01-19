@@ -55,8 +55,21 @@
     texture = theTexture;
 }
 
-- (void) dealloc
-{
+//- (void) setSourceRectangle:(Rectangle *)theSourceRectangle {
+//    [theSourceRectangle retain];
+//    if (sourceRectangle)
+//        [sourceRectangle release];
+//
+//    sourceRectangle = theSourceRectangle;
+//}
+
+//- (void) setOrigin:(Vector2 *)theOrigin {
+//    [theOrigin retain];
+//    [origin release];
+//    origin = theOrigin;
+//}
+
+- (void) dealloc {
     [texture release];
     [sourceRectangle release];
     [color release];

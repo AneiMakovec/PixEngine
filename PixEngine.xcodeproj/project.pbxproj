@@ -38,6 +38,8 @@
 		B58869AA21C4501F00CE4C0E /* BattlePosition.m in Sources */ = {isa = PBXBuildFile; fileRef = B58869A921C4501F00CE4C0E /* BattlePosition.m */; };
 		B58869AD21C4607C00CE4C0E /* ResetableLifetime.m in Sources */ = {isa = PBXBuildFile; fileRef = B58869AC21C4607C00CE4C0E /* ResetableLifetime.m */; };
 		B5C9FF4B21B4860A00B796F4 /* Random.m in Sources */ = {isa = PBXBuildFile; fileRef = B5C9FF4A21B4860A00B796F4 /* Random.m */; };
+		B5D0311B21F27E3600C162A1 /* AnimatedImage.m in Sources */ = {isa = PBXBuildFile; fileRef = B5D0311A21F27E3600C162A1 /* AnimatedImage.m */; };
+		B5D0311E21F27E5100C162A1 /* AnimatedImageFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = B5D0311D21F27E5100C162A1 /* AnimatedImageFrame.m */; };
 		B5D0A40E21C3F4B9005EF3C6 /* TextureStretcher.m in Sources */ = {isa = PBXBuildFile; fileRef = B5D0A40D21C3F4B9005EF3C6 /* TextureStretcher.m */; };
 		B5D0A41D21C3FA57005EF3C6 /* Entity.m in Sources */ = {isa = PBXBuildFile; fileRef = B5D0A41C21C3FA57005EF3C6 /* Entity.m */; };
 		B5D0A42421C4024E005EF3C6 /* DamageDealer.m in Sources */ = {isa = PBXBuildFile; fileRef = B5D0A42321C4024E005EF3C6 /* DamageDealer.m */; };
@@ -163,6 +165,10 @@
 		B5C9FF4821B485FC00B796F4 /* PixEngine.Utilities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PixEngine.Utilities.h; sourceTree = "<group>"; };
 		B5C9FF4921B4860A00B796F4 /* Random.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Random.h; sourceTree = "<group>"; };
 		B5C9FF4A21B4860A00B796F4 /* Random.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Random.m; sourceTree = "<group>"; };
+		B5D0311921F27E3600C162A1 /* AnimatedImage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnimatedImage.h; sourceTree = "<group>"; };
+		B5D0311A21F27E3600C162A1 /* AnimatedImage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnimatedImage.m; sourceTree = "<group>"; };
+		B5D0311C21F27E5100C162A1 /* AnimatedImageFrame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnimatedImageFrame.h; sourceTree = "<group>"; };
+		B5D0311D21F27E5100C162A1 /* AnimatedImageFrame.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnimatedImageFrame.m; sourceTree = "<group>"; };
 		B5D0A40C21C3F4B9005EF3C6 /* TextureStretcher.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TextureStretcher.h; sourceTree = "<group>"; };
 		B5D0A40D21C3F4B9005EF3C6 /* TextureStretcher.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TextureStretcher.m; sourceTree = "<group>"; };
 		B5D0A41621C3F774005EF3C6 /* PixEngine.Combat.classes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PixEngine.Combat.classes.h; sourceTree = "<group>"; };
@@ -223,6 +229,10 @@
 				B55FA72121D7F1E000526790 /* Label.m */,
 				B55FA72321D7F24C00526790 /* Image.h */,
 				B55FA72421D7F24C00526790 /* Image.m */,
+				B5D0311921F27E3600C162A1 /* AnimatedImage.h */,
+				B5D0311A21F27E3600C162A1 /* AnimatedImage.m */,
+				B5D0311C21F27E5100C162A1 /* AnimatedImageFrame.h */,
+				B5D0311D21F27E5100C162A1 /* AnimatedImageFrame.m */,
 				B55FA72D21D8151400526790 /* Button.h */,
 				B55FA72E21D8151400526790 /* Button.m */,
 				B52284CB21EF94A10005B3AC /* ImageButton.h */,
@@ -626,6 +636,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5D0311E21F27E5100C162A1 /* AnimatedImageFrame.m in Sources */,
 				B5D0A41D21C3FA57005EF3C6 /* Entity.m in Sources */,
 				B57D414021A7754C00ABA93B /* Collision.m in Sources */,
 				B5FD11A621EB614500D458A9 /* GuiPanel.m in Sources */,
@@ -650,6 +661,7 @@
 				B57D414321A7755900ABA93B /* CollisionAlgorithm.m in Sources */,
 				B58869AA21C4501F00CE4C0E /* BattlePosition.m in Sources */,
 				B55FA72221D7F1E000526790 /* Label.m in Sources */,
+				B5D0311B21F27E3600C162A1 /* AnimatedImage.m in Sources */,
 				B5849BCB21B5B8D600A87782 /* SimpleScene.m in Sources */,
 				B5FE06EB21CC730200038407 /* PrimitiveBatch.m in Sources */,
 				B57D414B21A775AB00ABA93B /* ParticleAAHalfPlaneCollision.m in Sources */,

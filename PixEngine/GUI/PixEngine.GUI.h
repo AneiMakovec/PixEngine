@@ -10,6 +10,8 @@
 
 #import "Label.h"
 #import "Image.h"
+#import "AnimatedImage.h"
+#import "AnimatedImageFrame.h"
 #import "Button.h"
 #import "ImageButton.h"
 #import "LabelButton.h"
