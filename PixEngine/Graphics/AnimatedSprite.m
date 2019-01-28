@@ -13,6 +13,7 @@
 
 @synthesize duration;
 @synthesize looping;
+@synthesize progress;
 
 NSArray *frameStartSort;
 
@@ -28,6 +29,7 @@ NSArray *frameStartSort;
     if (self != nil) {
         frames = [[NSMutableArray alloc] init];
         duration = theDuration;
+        progress = 0;
     }
     return self;
 }
@@ -56,6 +58,55 @@ NSArray *frameStartSort;
     for (int i = 0; i < [frames count] - 1; i++) {
         AnimatedSpriteFrame *nextFrame = (AnimatedSpriteFrame*)[frames objectAtIndex:i + 1];
         if (nextFrame.start > time) {
+            AnimatedSpriteFrame *frame = (AnimatedSpriteFrame*)[frames objectAtIndex:i];
+            return frame.sprite;
+        }
+    }
+    
+    // Return last frame.
+    AnimatedSpriteFrame *frame = (AnimatedSpriteFrame*)[frames objectAtIndex:[frames count] - 1];
+    return frame.sprite;
+}
+
+
+// new code
+-(BOOL) isAlive {
+    if (!looping) {
+        return progress < duration;
+    } else {
+        return YES;
+    }
+}
+
+- (void) reset {
+    progress = 0;
+}
+
+- (Sprite*) spriteWithElapsedTime:(NSTimeInterval)elapsed {
+    [self updateWithElapsed:elapsed];
+    return [self currentSprite];
+}
+
+- (void) updateWithElapsed:(NSTimeInterval)elapsed {
+    progress += elapsed;
+    
+    if (progress >= duration) {
+        if (looping)
+            progress = 0;
+        else
+            progress = duration;
+    }
+}
+
+- (Sprite*) currentSprite {
+    if (!looping && progress >= duration) {
+        // animation ended
+        return nil;
+    }
+    
+    for (int i = 0; i < [frames count] - 1; i++) {
+        AnimatedSpriteFrame *nextFrame = (AnimatedSpriteFrame*)[frames objectAtIndex:i + 1];
+        if (nextFrame.start > progress) {
             AnimatedSpriteFrame *frame = (AnimatedSpriteFrame*)[frames objectAtIndex:i];
             return frame.sprite;
         }

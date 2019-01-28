@@ -14,10 +14,13 @@ NS_ASSUME_NONNULL_BEGIN
 @interface AnimatedSprite : NSObject {
     NSMutableArray *frames;
     NSTimeInterval duration;
+    
+    NSTimeInterval progress;
     BOOL looping;
 }
 
 @property (nonatomic) NSTimeInterval duration;
+@property (nonatomic) NSTimeInterval progress;
 @property (nonatomic) BOOL looping;
 
 - (id) initWithDuration:(NSTimeInterval)duration;
@@ -25,6 +28,12 @@ NS_ASSUME_NONNULL_BEGIN
 - (void) addFrame:(AnimatedSpriteFrame*)frame;
 
 - (Sprite*) spriteAtTime:(NSTimeInterval)time;
+
+- (BOOL) isAlive;
+
+- (void) reset;
+
+- (Sprite*) spriteWithElapsedTime:(NSTimeInterval)elapsed;
 
 @end
 
