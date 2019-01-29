@@ -43,6 +43,7 @@
 		B5D0A40E21C3F4B9005EF3C6 /* TextureStretcher.m in Sources */ = {isa = PBXBuildFile; fileRef = B5D0A40D21C3F4B9005EF3C6 /* TextureStretcher.m */; };
 		B5D0A41D21C3FA57005EF3C6 /* Entity.m in Sources */ = {isa = PBXBuildFile; fileRef = B5D0A41C21C3FA57005EF3C6 /* Entity.m */; };
 		B5D0A42421C4024E005EF3C6 /* DamageDealer.m in Sources */ = {isa = PBXBuildFile; fileRef = B5D0A42321C4024E005EF3C6 /* DamageDealer.m */; };
+		B5D1747821FFCD730033DF2C /* CompositeImage.m in Sources */ = {isa = PBXBuildFile; fileRef = B5D1747721FFCD730033DF2C /* CompositeImage.m */; };
 		B5E3802D2183B08D0007D013 /* Scene.m in Sources */ = {isa = PBXBuildFile; fileRef = B5E3802C2183B08D0007D013 /* Scene.m */; };
 		B5E3805D2183B4A90007D013 /* Sprite.m in Sources */ = {isa = PBXBuildFile; fileRef = B5E3805C2183B4A90007D013 /* Sprite.m */; };
 		B5E380602183B4B90007D013 /* AnimatedSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = B5E3805F2183B4B90007D013 /* AnimatedSprite.m */; };
@@ -181,6 +182,8 @@
 		B5D0A42321C4024E005EF3C6 /* DamageDealer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DamageDealer.m; sourceTree = "<group>"; };
 		B5D0A42A21C412B3005EF3C6 /* IExperienceGainer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IExperienceGainer.h; sourceTree = "<group>"; };
 		B5D0A42B21C417BC005EF3C6 /* IExperienceGiver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IExperienceGiver.h; sourceTree = "<group>"; };
+		B5D1747621FFCD730033DF2C /* CompositeImage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CompositeImage.h; sourceTree = "<group>"; };
+		B5D1747721FFCD730033DF2C /* CompositeImage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CompositeImage.m; sourceTree = "<group>"; };
 		B5DE1258218DAA1A000D6784 /* PixEngine.Scene.Objects.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PixEngine.Scene.Objects.h; sourceTree = "<group>"; };
 		B5DE1259218DAA34000D6784 /* PixEngine.Scene.Objects.classes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PixEngine.Scene.Objects.classes.h; sourceTree = "<group>"; };
 		B5DE125A218DAA51000D6784 /* IPosition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IPosition.h; sourceTree = "<group>"; };
@@ -233,6 +236,8 @@
 				B5D0311A21F27E3600C162A1 /* AnimatedImage.m */,
 				B5D0311C21F27E5100C162A1 /* AnimatedImageFrame.h */,
 				B5D0311D21F27E5100C162A1 /* AnimatedImageFrame.m */,
+				B5D1747621FFCD730033DF2C /* CompositeImage.h */,
+				B5D1747721FFCD730033DF2C /* CompositeImage.m */,
 				B55FA72D21D8151400526790 /* Button.h */,
 				B55FA72E21D8151400526790 /* Button.m */,
 				B52284CB21EF94A10005B3AC /* ImageButton.h */,
@@ -651,6 +656,7 @@
 				B5E3805D2183B4A90007D013 /* Sprite.m in Sources */,
 				B55FA73321D815CE00526790 /* TouchPanelHelper.m in Sources */,
 				B55FA72521D7F24C00526790 /* Image.m in Sources */,
+				B5D1747821FFCD730033DF2C /* CompositeImage.m in Sources */,
 				B57D415721A775ED00ABA93B /* ParticleHalfPlaneCollision.m in Sources */,
 				B52284D021EF97620005B3AC /* LabelButton.m in Sources */,
 				B5849BD221B5BA0500A87782 /* SceneEventArgs.m in Sources */,

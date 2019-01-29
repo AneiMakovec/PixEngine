@@ -12,6 +12,7 @@
 #import "Image.h"
 #import "AnimatedImage.h"
 #import "AnimatedImageFrame.h"
+#import "CompositeImage.h"
 #import "Button.h"
 #import "ImageButton.h"
 #import "LabelButton.h"
