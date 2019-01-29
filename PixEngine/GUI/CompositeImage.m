@@ -8,6 +8,64 @@
 
 #import "CompositeImage.h"
 
+#import "PixEngine.GUI.h"
+
 @implementation CompositeImage
+
+- (id) initWithImageTextures:(NSMutableArray *)textures color:(Color *)color x:(int)theX y:(int)theY width:(int)theWidth height:(int)theHeight {
+    self = [super init];
+    if (self != nil) {
+        if ([textures count] == ImageLocations) {
+            x = theX;
+            y = theY;
+            
+            width = theWidth;
+            height = theHeight;
+            
+            imageWidth = width / 3;
+            imageHeight = height / 3;
+            
+            // init images
+            for (int i = 0; i < ImageLocations; i++) {
+                int gridX = i % 3;
+                int gridY = i / 3;
+                images[i] = [[Image alloc] initWithTexture:[textures objectAtIndex:i] toRectangle:[Rectangle rectangleWithX: x +imageWidth * gridX y: y + imageHeight * gridY width:imageWidth height:imageHeight]];
+                images[i].color = color;
+            }
+            
+            initialized = YES;
+        } else {
+            initialized = NO;
+        }
+    }
+    return self;
+}
+
+@synthesize scene;
+
+- (void) addedToScene:(id<IScene>)theScene {
+    if (initialized) {
+        for (int i = 0; i < ImageLocations; i++) {
+            [theScene addItem:images[i]];
+        }
+    }
+}
+
+- (void) removedFromScene:(id<IScene>)theScene {
+    if (initialized) {
+        for (int i = 0; i < ImageLocations; i++) {
+            [theScene removeItem:images[i]];
+        }
+    }
+}
+
+
+- (void) dealloc {
+    for (int i = 0; i < ImageLocations; i++) {
+        [images[i] release];
+    }
+    
+    [super dealloc];
+}
 
 @end

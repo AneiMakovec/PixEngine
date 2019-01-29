@@ -48,7 +48,6 @@
 		B5E3805D2183B4A90007D013 /* Sprite.m in Sources */ = {isa = PBXBuildFile; fileRef = B5E3805C2183B4A90007D013 /* Sprite.m */; };
 		B5E380602183B4B90007D013 /* AnimatedSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = B5E3805F2183B4B90007D013 /* AnimatedSprite.m */; };
 		B5E380632183B4C80007D013 /* AnimatedSpriteFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = B5E380622183B4C80007D013 /* AnimatedSpriteFrame.m */; };
-		B5FD11A021EB608900D458A9 /* Window.m in Sources */ = {isa = PBXBuildFile; fileRef = B5FD119F21EB608900D458A9 /* Window.m */; };
 		B5FD11A621EB614500D458A9 /* GuiPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = B5FD11A521EB614500D458A9 /* GuiPanel.m */; };
 		B5FE06EB21CC730200038407 /* PrimitiveBatch.m in Sources */ = {isa = PBXBuildFile; fileRef = B5FE06EA21CC730200038407 /* PrimitiveBatch.m */; };
 /* End PBXBuildFile section */
@@ -199,8 +198,6 @@
 		B5E3805F2183B4B90007D013 /* AnimatedSprite.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnimatedSprite.m; sourceTree = "<group>"; };
 		B5E380612183B4C80007D013 /* AnimatedSpriteFrame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnimatedSpriteFrame.h; sourceTree = "<group>"; };
 		B5E380622183B4C80007D013 /* AnimatedSpriteFrame.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnimatedSpriteFrame.m; sourceTree = "<group>"; };
-		B5FD119E21EB608900D458A9 /* Window.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Window.h; sourceTree = "<group>"; };
-		B5FD119F21EB608900D458A9 /* Window.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Window.m; sourceTree = "<group>"; };
 		B5FD11A421EB614500D458A9 /* GuiPanel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GuiPanel.h; sourceTree = "<group>"; };
 		B5FD11A521EB614500D458A9 /* GuiPanel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GuiPanel.m; sourceTree = "<group>"; };
 		B5FE06E921CC730200038407 /* PrimitiveBatch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrimitiveBatch.h; sourceTree = "<group>"; };
@@ -248,8 +245,6 @@
 				B52284D221EF9AA80005B3AC /* ImageLabelButton.m */,
 				B5FD11A421EB614500D458A9 /* GuiPanel.h */,
 				B5FD11A521EB614500D458A9 /* GuiPanel.m */,
-				B5FD119E21EB608900D458A9 /* Window.h */,
-				B5FD119F21EB608900D458A9 /* Window.m */,
 			);
 			path = GUI;
 			sourceTree = "<group>";
@@ -677,7 +672,6 @@
 				B5E380602183B4B90007D013 /* AnimatedSprite.m in Sources */,
 				B52284CD21EF94A10005B3AC /* ImageButton.m in Sources */,
 				B57B0D3A21A613A30064B91F /* Lifetime.m in Sources */,
-				B5FD11A021EB608900D458A9 /* Window.m in Sources */,
 				B5D0A40E21C3F4B9005EF3C6 /* TextureStretcher.m in Sources */,
 				B57D415121A775C700ABA93B /* AARectangleAAHalfPlaneCollision.m in Sources */,
 				B58869AD21C4607C00CE4C0E /* ResetableLifetime.m in Sources */,

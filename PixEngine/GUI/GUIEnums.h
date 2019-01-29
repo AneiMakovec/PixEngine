@@ -19,3 +19,16 @@ typedef enum {
     VerticalAlignMiddle,
     VerticalAlignBottom
 } VerticalAlign;
+
+typedef enum {
+    ImageLocationUpLeft,
+    ImageLocationUpCenter,
+    ImageLocationUpRight,
+    ImageLocationMiddleLeft,
+    ImageLocationMiddleCenter,
+    ImageLocationMiddleRight,
+    ImageLocationDownLeft,
+    ImageLocationDownCenter,
+    ImageLocationDownRight,
+    ImageLocations
+} ImageLocation;

@@ -8,21 +8,13 @@
 
 #import "GuiPanel.h"
 
-#import "Retronator.Xni.Framework.Content.h"
-#import "Retronator.Xni.Framework.Content.Pipeline.Processors.h"
-
 #import "PixEngine.GUI.h"
 
 @implementation GuiPanel
 
-- (id) initWithScene:(id<IScene>)theScene camera:(Matrix*)camera x:(int)x y:(int)y width:(int)width height:(int)height {
+- (id) initWithCamera:(Matrix*)camera {
     self = [super init];
     if (self != nil) {
-        scene = theScene;
-        
-        content = [[ContentManager alloc] init];
-        
-        display = [[Rectangle alloc] initWithX:x y:y width:width height:height];
         inversedCamera = [[Matrix invert:camera] retain];
         
         items = [[NSMutableArray alloc] init];
@@ -30,7 +22,7 @@
     return self;
 }
 
-@synthesize scene, display, items;
+@synthesize scene, items;
 
 - (void) addedToScene:(id<IScene>)scene {
     // Add child items to scene
@@ -54,6 +46,13 @@
             [button updateWithInverseView:inversedCamera];
         }
     }
+}
+
+- (void) dealloc {
+    [inversedCamera release];
+    [items release];
+    
+    [super dealloc];
 }
 
 @end

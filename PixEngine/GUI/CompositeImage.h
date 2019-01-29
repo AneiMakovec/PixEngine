@@ -8,9 +8,26 @@
 
 #import <Foundation/Foundation.h>
 
+#import "PixEngine.GUI.classes.h"
+#import "PixEngine.Scene.Objects.h"
+
 NS_ASSUME_NONNULL_BEGIN
 
-@interface CompositeImage : NSObject
+@interface CompositeImage : NSObject<ISceneUser> {
+    id<IScene> scene;
+    
+    int x;
+    int y;
+    int width;
+    int height;
+    int imageWidth;
+    int imageHeight;
+    
+    Image *images[ImageLocations];
+    BOOL initialized;
+}
+
+- (id) initWithImageTextures:(NSMutableArray *)textures color:(Color *)color x:(int)theX y:(int)theY width:(int)theWidth height:(int)theHeight;
 
 @end
 
