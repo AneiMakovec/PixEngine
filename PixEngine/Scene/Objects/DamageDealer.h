@@ -14,10 +14,10 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface DamageDealer : Entity<IDamageDealer> {
-    float damageStrength;
+    NSMutableArray *targets;
 }
 
-- (id) initWithHealth:(int)hp damageStrength:(float)theDamageStrength;
+- (id) initWithHealth:(int)hp;
 
 @end
 

@@ -10,26 +10,24 @@
 
 @implementation DamageDealer
 
-- (id) initWithHealth:(int)hp damageStrength:(float)theDamageStrength {
+- (id) initWithHealth:(int)hp {
     self = [super initWithHealth:hp];
     if (self != nil) {
-        damageStrength = theDamageStrength;
+        targets = [[NSMutableArray alloc] init];
     }
     return self;
 }
 
-@synthesize damageStrength;
+@synthesize targets;
 
-- (void) dealDamageToTarget:(id<IDamageable>)target damage:(int)theDamage {
-    [target takeDamage:theDamage];
+- (void) dealDamageToTargets {
+//    for (id<IDamageable> target in targets)
+//        [target takeDamage:damage];
 }
 
-- (void) healTarget:(id<IDamageable>)target amount:(int)amount {
-    [target heal:amount];
-}
-
-- (int) healPercentTarget:(id<IDamageable>)target amount:(float)amount {
-    return [target healPercent:amount];
+- (void) healTargets {
+//    for (id<IDamageable> target in targets)
+//        [target heal:heal];
 }
 
 @end

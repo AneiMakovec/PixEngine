@@ -10,11 +10,9 @@
 
 @protocol IDamageDealer <NSObject>
 
-@property (nonatomic) float damageStrength;
+@property (nonatomic, retain) NSMutableArray *targets;
 
-- (void) dealDamageToTarget:(id<IDamageable>)target damage:(int)theDamage;
-
-- (void) healTarget:(id<IDamageable>)target amount:(int)amount;
-- (int) healPercentTarget:(id<IDamageable>)target amount:(float)amount;
+- (void) dealDamageToTargets;
+- (void) healTargets;
 
 @end

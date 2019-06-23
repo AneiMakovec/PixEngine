@@ -13,23 +13,16 @@
 - (id) initWithHealth:(int)hp {
     self = [super init];
     if (self != nil) {
-        position = [[Vector2 alloc] init];
-        velocity = [[Vector2 alloc] init];
         maxHealthPoints = hp;
         currentHealthPoints = hp;
     }
     return self;
 }
 
-@synthesize position, velocity, maxHealthPoints, currentHealthPoints;
+@synthesize maxHealthPoints, currentHealthPoints;
 
 - (void) takeDamage:(int)theDamage {
     currentHealthPoints -= theDamage;
-}
-
-- (void) takePercentDamage:(float)theDamage {
-    float percent = 1.0f - theDamage;
-    currentHealthPoints *= percent;
 }
 
 - (void) heal:(int)amount {
@@ -41,14 +34,12 @@
     }
 }
 
-- (int) healPercent:(float)heal {
-    int amount = (float)maxHealthPoints * heal;
-    
-    if (currentHealthPoints < maxHealthPoints) {
-        [self heal:amount];
-    }
-    
-    return amount;
+- (int) getCurrentHealthPoints {
+    return currentHealthPoints;
+}
+
+- (int) getMaxHealthPoints {
+    return maxHealthPoints;
 }
    
 @end

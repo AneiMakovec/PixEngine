@@ -8,14 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
-#import "IMovable.h"
 #import "IDamageable.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface Entity : NSObject<IMovable, IDamageable> {
-    Vector2 *position;
-    Vector2 *velocity;
+@interface Entity : NSObject<IDamageable> {
     int maxHealthPoints;
     int currentHealthPoints;
 }
