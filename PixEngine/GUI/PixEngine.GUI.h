@@ -10,6 +10,8 @@
 
 #import "Label.h"
 #import "Image.h"
+#import "TouchImage.h"
+#import "MovableImage.h"
 #import "AnimatedImage.h"
 #import "AnimatedImageFrame.h"
 #import "CompositeImage.h"

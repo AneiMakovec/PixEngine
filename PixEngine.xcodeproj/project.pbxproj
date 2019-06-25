@@ -10,6 +10,8 @@
 		B52284CD21EF94A10005B3AC /* ImageButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B52284CC21EF94A10005B3AC /* ImageButton.m */; };
 		B52284D021EF97620005B3AC /* LabelButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B52284CF21EF97620005B3AC /* LabelButton.m */; };
 		B52284D321EF9AA80005B3AC /* ImageLabelButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B52284D221EF9AA80005B3AC /* ImageLabelButton.m */; };
+		B5309CD822C27084005CE22F /* TouchImage.m in Sources */ = {isa = PBXBuildFile; fileRef = B5309CD722C27084005CE22F /* TouchImage.m */; };
+		B5309CDB22C27B54005CE22F /* MovableImage.m in Sources */ = {isa = PBXBuildFile; fileRef = B5309CDA22C27B54005CE22F /* MovableImage.m */; };
 		B55FA71B21D7DFDA00526790 /* GridScene.m in Sources */ = {isa = PBXBuildFile; fileRef = B55FA71A21D7DFDA00526790 /* GridScene.m */; };
 		B55FA72221D7F1E000526790 /* Label.m in Sources */ = {isa = PBXBuildFile; fileRef = B55FA72121D7F1E000526790 /* Label.m */; };
 		B55FA72521D7F24C00526790 /* Image.m in Sources */ = {isa = PBXBuildFile; fileRef = B55FA72421D7F24C00526790 /* Image.m */; };
@@ -71,6 +73,10 @@
 		B52284CF21EF97620005B3AC /* LabelButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LabelButton.m; sourceTree = "<group>"; };
 		B52284D121EF9AA80005B3AC /* ImageLabelButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageLabelButton.h; sourceTree = "<group>"; };
 		B52284D221EF9AA80005B3AC /* ImageLabelButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageLabelButton.m; sourceTree = "<group>"; };
+		B5309CD622C27084005CE22F /* TouchImage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TouchImage.h; sourceTree = "<group>"; };
+		B5309CD722C27084005CE22F /* TouchImage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TouchImage.m; sourceTree = "<group>"; };
+		B5309CD922C27B54005CE22F /* MovableImage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MovableImage.h; sourceTree = "<group>"; };
+		B5309CDA22C27B54005CE22F /* MovableImage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MovableImage.m; sourceTree = "<group>"; };
 		B55FA71921D7DFDA00526790 /* GridScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GridScene.h; sourceTree = "<group>"; };
 		B55FA71A21D7DFDA00526790 /* GridScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GridScene.m; sourceTree = "<group>"; };
 		B55FA71D21D7F15A00526790 /* PixEngine.GUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PixEngine.GUI.h; sourceTree = "<group>"; };
@@ -229,6 +235,10 @@
 				B55FA72121D7F1E000526790 /* Label.m */,
 				B55FA72321D7F24C00526790 /* Image.h */,
 				B55FA72421D7F24C00526790 /* Image.m */,
+				B5309CD622C27084005CE22F /* TouchImage.h */,
+				B5309CD722C27084005CE22F /* TouchImage.m */,
+				B5309CD922C27B54005CE22F /* MovableImage.h */,
+				B5309CDA22C27B54005CE22F /* MovableImage.m */,
 				B5D0311921F27E3600C162A1 /* AnimatedImage.h */,
 				B5D0311A21F27E3600C162A1 /* AnimatedImage.m */,
 				B5D0311C21F27E5100C162A1 /* AnimatedImageFrame.h */,
@@ -647,6 +657,7 @@
 				B57D415A21A775FB00ABA93B /* ParticleConvexCollision.m in Sources */,
 				B5D0A42421C4024E005EF3C6 /* DamageDealer.m in Sources */,
 				B57B0D4721A61A8A0064B91F /* HalfPlane.m in Sources */,
+				B5309CD822C27084005CE22F /* TouchImage.m in Sources */,
 				B52284D321EF9AA80005B3AC /* ImageLabelButton.m in Sources */,
 				B5E3805D2183B4A90007D013 /* Sprite.m in Sources */,
 				B55FA73321D815CE00526790 /* TouchPanelHelper.m in Sources */,
@@ -667,6 +678,7 @@
 				B5FE06EB21CC730200038407 /* PrimitiveBatch.m in Sources */,
 				B57D414B21A775AB00ABA93B /* ParticleAAHalfPlaneCollision.m in Sources */,
 				B57D413B21A7750D00ABA93B /* MovementPhysics.m in Sources */,
+				B5309CDB22C27B54005CE22F /* MovableImage.m in Sources */,
 				B57D414E21A775B800ABA93B /* ParticleAARectangleCollision.m in Sources */,
 				B57B0D4D21A61AA40064B91F /* ConvexPolygon.m in Sources */,
 				B5E380602183B4B90007D013 /* AnimatedSprite.m in Sources */,
