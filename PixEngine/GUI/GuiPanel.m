@@ -12,11 +12,9 @@
 
 @implementation GuiPanel
 
-- (id) initWithCamera:(Matrix*)camera {
+- (id) init {
     self = [super init];
     if (self != nil) {
-        inversedCamera = [[Matrix invert:camera] retain];
-        
         items = [[NSMutableArray alloc] init];
     }
     return self;
@@ -38,18 +36,7 @@
     }
 }
 
-- (void) updateWithGameTime:(GameTime *)gameTime {
-    // Update the buttons
-    for (id item in items) {
-        Button *button = [item isKindOfClass:[Button class]] ? item : nil;
-        if (button) {
-            [button updateWithInverseView:inversedCamera];
-        }
-    }
-}
-
 - (void) dealloc {
-    [inversedCamera release];
     [items release];
     
     [super dealloc];

@@ -30,7 +30,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (id) initWithInputArea:(Rectangle*)theInputArea font:(SpriteFont *)font text:(NSString *)text;
 
-@property (nonatomic, readonly) Label *label;
+@property (nonatomic, retain) Label *label;
 
 @property (nonatomic, retain) Color *labelColor, *labelHoverColor;
 

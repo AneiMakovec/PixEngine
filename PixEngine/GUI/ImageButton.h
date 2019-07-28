@@ -31,7 +31,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (id) initWithInputArea:(Rectangle*)theInputArea background:(Texture2D*)background;
 
-@property (nonatomic, readonly) Image *backgroundImage;
+@property (nonatomic, retain) Image *backgroundImage;
 
 @property (nonatomic, retain) Color *backgroundColor, *backgroundHoverColor;
 

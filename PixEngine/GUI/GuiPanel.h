@@ -14,17 +14,13 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface GuiPanel : NSObject<ISceneUser, ICustomUpdate> {
+@interface GuiPanel : NSObject<ISceneUser> {
     id<IScene> scene;
-    
-    Matrix *inversedCamera;
     
     NSMutableArray *items;
 }
 
 @property (nonatomic, retain) NSMutableArray *items;
-
-- (id) initWithCamera:(Matrix*)camera;
 
 @end
 

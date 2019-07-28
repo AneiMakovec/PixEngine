@@ -20,6 +20,11 @@
 		B55FA73821D816CC00526790 /* Rectangle+extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = B55FA73721D816CC00526790 /* Rectangle+extensions.m */; };
 		B5689E8D21839CFA0013719A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5689E8C21839CFA0013719A /* Foundation.framework */; };
 		B5689E8F21839D080013719A /* libXNI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B5689E8E21839D080013719A /* libXNI.a */; };
+		B56D2BFE22EDA1890001B14B /* DoubleImageButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B56D2BFD22EDA1890001B14B /* DoubleImageButton.m */; };
+		B56D2C0122EDA1990001B14B /* DoubleImageLabelButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B56D2C0022EDA1990001B14B /* DoubleImageLabelButton.m */; };
+		B56D2C0422EDABAC0001B14B /* RadioButtonGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = B56D2C0322EDABAC0001B14B /* RadioButtonGroup.m */; };
+		B56D2C0C22EDAEF50001B14B /* RadioButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B56D2C0B22EDAEF50001B14B /* RadioButton.m */; };
+		B56D2C0F22EDB2190001B14B /* DoubleImageLabelRadioButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B56D2C0E22EDB2190001B14B /* DoubleImageLabelRadioButton.m */; };
 		B57B0D3A21A613A30064B91F /* Lifetime.m in Sources */ = {isa = PBXBuildFile; fileRef = B57B0D3921A613A30064B91F /* Lifetime.m */; };
 		B57B0D4721A61A8A0064B91F /* HalfPlane.m in Sources */ = {isa = PBXBuildFile; fileRef = B57B0D4621A61A8A0064B91F /* HalfPlane.m */; };
 		B57B0D4A21A61A940064B91F /* AAHalfPlane.m in Sources */ = {isa = PBXBuildFile; fileRef = B57B0D4921A61A940064B91F /* AAHalfPlane.m */; };
@@ -97,6 +102,17 @@
 		B5689E7F21839CDE0013719A /* libPixEngine.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPixEngine.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5689E8C21839CFA0013719A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B5689E8E21839D080013719A /* libXNI.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libXNI.a; path = ../XNI/libXNI.a; sourceTree = "<group>"; };
+		B56D2BFC22EDA1890001B14B /* DoubleImageButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DoubleImageButton.h; sourceTree = "<group>"; };
+		B56D2BFD22EDA1890001B14B /* DoubleImageButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DoubleImageButton.m; sourceTree = "<group>"; };
+		B56D2BFF22EDA1990001B14B /* DoubleImageLabelButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DoubleImageLabelButton.h; sourceTree = "<group>"; };
+		B56D2C0022EDA1990001B14B /* DoubleImageLabelButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DoubleImageLabelButton.m; sourceTree = "<group>"; };
+		B56D2C0222EDABAC0001B14B /* RadioButtonGroup.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RadioButtonGroup.h; sourceTree = "<group>"; };
+		B56D2C0322EDABAC0001B14B /* RadioButtonGroup.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RadioButtonGroup.m; sourceTree = "<group>"; };
+		B56D2C0A22EDAEF50001B14B /* RadioButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RadioButton.h; sourceTree = "<group>"; };
+		B56D2C0B22EDAEF50001B14B /* RadioButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RadioButton.m; sourceTree = "<group>"; };
+		B56D2C0D22EDB2190001B14B /* DoubleImageLabelRadioButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DoubleImageLabelRadioButton.h; sourceTree = "<group>"; };
+		B56D2C0E22EDB2190001B14B /* DoubleImageLabelRadioButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DoubleImageLabelRadioButton.m; sourceTree = "<group>"; };
+		B56D2C1022EDB55E0001B14B /* IButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IButton.h; sourceTree = "<group>"; };
 		B57B0D1C21A611840064B91F /* IVelocity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IVelocity.h; sourceTree = "<group>"; };
 		B57B0D1D21A611920064B91F /* IMovable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IMovable.h; sourceTree = "<group>"; };
 		B57B0D2021A611D30064B91F /* IRotation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IRotation.h; sourceTree = "<group>"; };
@@ -228,31 +244,12 @@
 		B55FA71C21D7F13D00526790 /* GUI */ = {
 			isa = PBXGroup;
 			children = (
+				B56D2C0722EDAE4C0001B14B /* Buttons */,
+				B56D2C0622EDAE390001B14B /* Text */,
+				B56D2C0522EDAE1B0001B14B /* Images */,
 				B55FA71D21D7F15A00526790 /* PixEngine.GUI.h */,
 				B55FA71E21D7F17100526790 /* PixEngine.GUI.classes.h */,
 				B55FA71F21D7F1B700526790 /* GUIEnums.h */,
-				B55FA72021D7F1E000526790 /* Label.h */,
-				B55FA72121D7F1E000526790 /* Label.m */,
-				B55FA72321D7F24C00526790 /* Image.h */,
-				B55FA72421D7F24C00526790 /* Image.m */,
-				B5309CD622C27084005CE22F /* TouchImage.h */,
-				B5309CD722C27084005CE22F /* TouchImage.m */,
-				B5309CD922C27B54005CE22F /* MovableImage.h */,
-				B5309CDA22C27B54005CE22F /* MovableImage.m */,
-				B5D0311921F27E3600C162A1 /* AnimatedImage.h */,
-				B5D0311A21F27E3600C162A1 /* AnimatedImage.m */,
-				B5D0311C21F27E5100C162A1 /* AnimatedImageFrame.h */,
-				B5D0311D21F27E5100C162A1 /* AnimatedImageFrame.m */,
-				B5D1747621FFCD730033DF2C /* CompositeImage.h */,
-				B5D1747721FFCD730033DF2C /* CompositeImage.m */,
-				B55FA72D21D8151400526790 /* Button.h */,
-				B55FA72E21D8151400526790 /* Button.m */,
-				B52284CB21EF94A10005B3AC /* ImageButton.h */,
-				B52284CC21EF94A10005B3AC /* ImageButton.m */,
-				B52284CE21EF97620005B3AC /* LabelButton.h */,
-				B52284CF21EF97620005B3AC /* LabelButton.m */,
-				B52284D121EF9AA80005B3AC /* ImageLabelButton.h */,
-				B52284D221EF9AA80005B3AC /* ImageLabelButton.m */,
 				B5FD11A421EB614500D458A9 /* GuiPanel.h */,
 				B5FD11A521EB614500D458A9 /* GuiPanel.m */,
 			);
@@ -351,6 +348,76 @@
 				B55FA71A21D7DFDA00526790 /* GridScene.m */,
 			);
 			path = Scene;
+			sourceTree = "<group>";
+		};
+		B56D2C0522EDAE1B0001B14B /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				B55FA72321D7F24C00526790 /* Image.h */,
+				B55FA72421D7F24C00526790 /* Image.m */,
+				B5309CD622C27084005CE22F /* TouchImage.h */,
+				B5309CD722C27084005CE22F /* TouchImage.m */,
+				B5309CD922C27B54005CE22F /* MovableImage.h */,
+				B5309CDA22C27B54005CE22F /* MovableImage.m */,
+				B5D0311921F27E3600C162A1 /* AnimatedImage.h */,
+				B5D0311A21F27E3600C162A1 /* AnimatedImage.m */,
+				B5D0311C21F27E5100C162A1 /* AnimatedImageFrame.h */,
+				B5D0311D21F27E5100C162A1 /* AnimatedImageFrame.m */,
+				B5D1747621FFCD730033DF2C /* CompositeImage.h */,
+				B5D1747721FFCD730033DF2C /* CompositeImage.m */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		B56D2C0622EDAE390001B14B /* Text */ = {
+			isa = PBXGroup;
+			children = (
+				B55FA72021D7F1E000526790 /* Label.h */,
+				B55FA72121D7F1E000526790 /* Label.m */,
+			);
+			name = Text;
+			sourceTree = "<group>";
+		};
+		B56D2C0722EDAE4C0001B14B /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				B56D2C1022EDB55E0001B14B /* IButton.h */,
+				B56D2C0822EDAE820001B14B /* Normal buttons */,
+				B56D2C0922EDAE990001B14B /* Radio buttons */,
+			);
+			name = Buttons;
+			sourceTree = "<group>";
+		};
+		B56D2C0822EDAE820001B14B /* Normal buttons */ = {
+			isa = PBXGroup;
+			children = (
+				B55FA72D21D8151400526790 /* Button.h */,
+				B55FA72E21D8151400526790 /* Button.m */,
+				B52284CB21EF94A10005B3AC /* ImageButton.h */,
+				B52284CC21EF94A10005B3AC /* ImageButton.m */,
+				B52284CE21EF97620005B3AC /* LabelButton.h */,
+				B52284CF21EF97620005B3AC /* LabelButton.m */,
+				B52284D121EF9AA80005B3AC /* ImageLabelButton.h */,
+				B52284D221EF9AA80005B3AC /* ImageLabelButton.m */,
+				B56D2BFC22EDA1890001B14B /* DoubleImageButton.h */,
+				B56D2BFD22EDA1890001B14B /* DoubleImageButton.m */,
+				B56D2BFF22EDA1990001B14B /* DoubleImageLabelButton.h */,
+				B56D2C0022EDA1990001B14B /* DoubleImageLabelButton.m */,
+			);
+			name = "Normal buttons";
+			sourceTree = "<group>";
+		};
+		B56D2C0922EDAE990001B14B /* Radio buttons */ = {
+			isa = PBXGroup;
+			children = (
+				B56D2C0A22EDAEF50001B14B /* RadioButton.h */,
+				B56D2C0B22EDAEF50001B14B /* RadioButton.m */,
+				B56D2C0D22EDB2190001B14B /* DoubleImageLabelRadioButton.h */,
+				B56D2C0E22EDB2190001B14B /* DoubleImageLabelRadioButton.m */,
+				B56D2C0222EDABAC0001B14B /* RadioButtonGroup.h */,
+				B56D2C0322EDABAC0001B14B /* RadioButtonGroup.m */,
+			);
+			name = "Radio buttons";
 			sourceTree = "<group>";
 		};
 		B57B0D1B21A611650064B91F /* Movement */ = {
@@ -646,7 +713,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B56D2BFE22EDA1890001B14B /* DoubleImageButton.m in Sources */,
+				B56D2C0F22EDB2190001B14B /* DoubleImageLabelRadioButton.m in Sources */,
 				B5D0311E21F27E5100C162A1 /* AnimatedImageFrame.m in Sources */,
+				B56D2C0C22EDAEF50001B14B /* RadioButton.m in Sources */,
 				B5D0A41D21C3FA57005EF3C6 /* Entity.m in Sources */,
 				B57D414021A7754C00ABA93B /* Collision.m in Sources */,
 				B5FD11A621EB614500D458A9 /* GuiPanel.m in Sources */,
@@ -654,6 +724,7 @@
 				B55FA71B21D7DFDA00526790 /* GridScene.m in Sources */,
 				B57D415421A775D400ABA93B /* AARectangleAARectangleCollision.m in Sources */,
 				B5849BCF21B5B97E00A87782 /* SceneAction.m in Sources */,
+				B56D2C0422EDABAC0001B14B /* RadioButtonGroup.m in Sources */,
 				B57D415A21A775FB00ABA93B /* ParticleConvexCollision.m in Sources */,
 				B5D0A42421C4024E005EF3C6 /* DamageDealer.m in Sources */,
 				B57B0D4721A61A8A0064B91F /* HalfPlane.m in Sources */,
@@ -674,6 +745,7 @@
 				B58869AA21C4501F00CE4C0E /* BattlePosition.m in Sources */,
 				B55FA72221D7F1E000526790 /* Label.m in Sources */,
 				B5D0311B21F27E3600C162A1 /* AnimatedImage.m in Sources */,
+				B56D2C0122EDA1990001B14B /* DoubleImageLabelButton.m in Sources */,
 				B5849BCB21B5B8D600A87782 /* SimpleScene.m in Sources */,
 				B5FE06EB21CC730200038407 /* PrimitiveBatch.m in Sources */,
 				B57D414B21A775AB00ABA93B /* ParticleAAHalfPlaneCollision.m in Sources */,

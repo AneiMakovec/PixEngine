@@ -13,12 +13,14 @@
 
 #import "PixEngine.Control.h"
 
+#import "IButton.h"
+
 NS_ASSUME_NONNULL_BEGIN
 
 /*
     YOU MUST INITIALIZE THE TOUCH PANEL HELPER BEFORE USING BUTTONS!
 */
-@interface Button : NSObject <ISceneUser> {
+@interface Button : NSObject <IButton, ISceneUser> {
     id<IScene> scene;
 
     Rectangle *inputArea;
@@ -32,14 +34,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (id) initWithInputArea:(Rectangle*)theInputArea;
 
-@property (nonatomic, readonly) Rectangle *inputArea;
-@property (nonatomic) BOOL enabled;
-
-@property (nonatomic, readonly) BOOL isDown;
 @property (nonatomic, readonly) BOOL wasPressed;
 @property (nonatomic, readonly) BOOL wasReleased;
-
-- (void) updateWithInverseView:(Matrix*)inverseView;
 
 @end
 

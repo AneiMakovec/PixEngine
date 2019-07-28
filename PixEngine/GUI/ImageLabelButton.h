@@ -34,12 +34,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (id) initWithInputArea:(Rectangle*)theInputArea background:(Texture2D*)background font:(SpriteFont *)font text:(NSString *)text;
 
-@property (nonatomic, readonly) Image *backgroundImage;
-@property (nonatomic, readonly) Label *label;
+@property (nonatomic, retain) Image *backgroundImage;
+@property (nonatomic, retain) Label *label;
 
 @property (nonatomic, retain) Color *labelColor, *labelHoverColor, *backgroundColor, *backgroundHoverColor;
-
-- (void) updateWithInverseView:(Matrix*)inverseView;
 
 - (void) setBackground:(Texture2D*)background;
 
