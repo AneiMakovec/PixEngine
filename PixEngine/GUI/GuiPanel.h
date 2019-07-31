@@ -12,9 +12,11 @@
 #import "PixEngine.Scene.Objects.h"
 #import "PixEngine.GUI.classes.h"
 
+#import "ITouchUpdate.h"
+
 NS_ASSUME_NONNULL_BEGIN
 
-@interface GuiPanel : NSObject<ISceneUser> {
+@interface GuiPanel : NSObject<ISceneUser, ICustomUpdate, ITouchUpdate> {
     id<IScene> scene;
     
     NSMutableArray *items;

@@ -9,9 +9,11 @@
 #import <Foundation/Foundation.h>
 #import "PixEngine.GUI.classes.h"
 
+#import "PixEngine.Scene.Objects.h"
+
 NS_ASSUME_NONNULL_BEGIN
 
-@interface Label : NSObject {
+@interface Label : NSObject<IPosition> {
     SpriteFont *font;
     NSString *text;
     

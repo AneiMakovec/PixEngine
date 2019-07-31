@@ -36,6 +36,14 @@
     }
 }
 
+- (void) updateWithGameTime:(GameTime *)gameTime {
+    // Override method in child implementations.
+}
+
+- (void) updateWithInverseView:(Matrix *)inverseView {
+    // Override method in child implementations.
+}
+
 - (void) dealloc {
     [items release];
     

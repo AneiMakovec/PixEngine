@@ -21,9 +21,12 @@
 #import "ImageButton.h"
 #import "LabelButton.h"
 #import "ImageLabelButton.h"
-#import "GuiPanel.h"
 #import "DoubleImageButton.h"
 #import "DoubleImageLabelButton.h"
 #import "RadioButton.h"
 #import "DoubleImageLabelRadioButton.h"
 #import "RadioButtonGroup.h"
+
+#import "ITouchUpdate.h"
+#import "GuiPanel.h"
+#import "ScrollPanel.h"

@@ -8,9 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
+#import "PixEngine.Scene.Objects.h"
+
 NS_ASSUME_NONNULL_BEGIN
 
-@interface Image : NSObject {
+@interface Image : NSObject<IPosition> {
     Texture2D *texture;
     Rectangle *sourceRectangle;
     

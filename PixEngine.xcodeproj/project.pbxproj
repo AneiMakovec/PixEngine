@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B51722C122F20CB0005718D4 /* ScrollPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = B51722C022F20CB0005718D4 /* ScrollPanel.m */; };
 		B52284CD21EF94A10005B3AC /* ImageButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B52284CC21EF94A10005B3AC /* ImageButton.m */; };
 		B52284D021EF97620005B3AC /* LabelButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B52284CF21EF97620005B3AC /* LabelButton.m */; };
 		B52284D321EF9AA80005B3AC /* ImageLabelButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B52284D221EF9AA80005B3AC /* ImageLabelButton.m */; };
@@ -72,6 +73,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B51722BF22F20CB0005718D4 /* ScrollPanel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScrollPanel.h; sourceTree = "<group>"; };
+		B51722C022F20CB0005718D4 /* ScrollPanel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScrollPanel.m; sourceTree = "<group>"; };
+		B51722C222F2109E005718D4 /* ITouchUpdate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ITouchUpdate.h; sourceTree = "<group>"; };
 		B52284CB21EF94A10005B3AC /* ImageButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageButton.h; sourceTree = "<group>"; };
 		B52284CC21EF94A10005B3AC /* ImageButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageButton.m; sourceTree = "<group>"; };
 		B52284CE21EF97620005B3AC /* LabelButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LabelButton.h; sourceTree = "<group>"; };
@@ -250,8 +254,11 @@
 				B55FA71D21D7F15A00526790 /* PixEngine.GUI.h */,
 				B55FA71E21D7F17100526790 /* PixEngine.GUI.classes.h */,
 				B55FA71F21D7F1B700526790 /* GUIEnums.h */,
+				B51722C222F2109E005718D4 /* ITouchUpdate.h */,
 				B5FD11A421EB614500D458A9 /* GuiPanel.h */,
 				B5FD11A521EB614500D458A9 /* GuiPanel.m */,
+				B51722BF22F20CB0005718D4 /* ScrollPanel.h */,
+				B51722C022F20CB0005718D4 /* ScrollPanel.m */,
 			);
 			path = GUI;
 			sourceTree = "<group>";
@@ -723,6 +730,7 @@
 				B5E3802D2183B08D0007D013 /* Scene.m in Sources */,
 				B55FA71B21D7DFDA00526790 /* GridScene.m in Sources */,
 				B57D415421A775D400ABA93B /* AARectangleAARectangleCollision.m in Sources */,
+				B51722C122F20CB0005718D4 /* ScrollPanel.m in Sources */,
 				B5849BCF21B5B97E00A87782 /* SceneAction.m in Sources */,
 				B56D2C0422EDABAC0001B14B /* RadioButtonGroup.m in Sources */,
 				B57D415A21A775FB00ABA93B /* ParticleConvexCollision.m in Sources */,

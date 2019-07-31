@@ -8,4 +8,4 @@
 
 #import "GUIEnums.h"
 
-@class IButton, Label, Image, TouchImage, MovableImage, AnimatedImage, AnimatedImageFrame, CompositeImage, Button, ImageButton, LabelButton, ImageLabelButton, GuiPanel, DoubleImageButton, DoubleImageLabelButton, RadioButton, DoubleImageLabelRadioButton, RadioButtonGroup;
+@class ITouchUpdate, IButton, Label, Image, TouchImage, MovableImage, AnimatedImage, AnimatedImageFrame, CompositeImage, Button, ImageButton, LabelButton, ImageLabelButton, GuiPanel, ScrollPanel, DoubleImageButton, DoubleImageLabelButton, RadioButton, DoubleImageLabelRadioButton, RadioButtonGroup;
