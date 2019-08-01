@@ -52,6 +52,7 @@
 		B5D0A41D21C3FA57005EF3C6 /* Entity.m in Sources */ = {isa = PBXBuildFile; fileRef = B5D0A41C21C3FA57005EF3C6 /* Entity.m */; };
 		B5D0A42421C4024E005EF3C6 /* DamageDealer.m in Sources */ = {isa = PBXBuildFile; fileRef = B5D0A42321C4024E005EF3C6 /* DamageDealer.m */; };
 		B5D1747821FFCD730033DF2C /* CompositeImage.m in Sources */ = {isa = PBXBuildFile; fileRef = B5D1747721FFCD730033DF2C /* CompositeImage.m */; };
+		B5D9CE7522F3311C00AC165A /* ImageLabelRadioButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B5D9CE7422F3311C00AC165A /* ImageLabelRadioButton.m */; };
 		B5E3802D2183B08D0007D013 /* Scene.m in Sources */ = {isa = PBXBuildFile; fileRef = B5E3802C2183B08D0007D013 /* Scene.m */; };
 		B5E3805D2183B4A90007D013 /* Sprite.m in Sources */ = {isa = PBXBuildFile; fileRef = B5E3805C2183B4A90007D013 /* Sprite.m */; };
 		B5E380602183B4B90007D013 /* AnimatedSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = B5E3805F2183B4B90007D013 /* AnimatedSprite.m */; };
@@ -209,6 +210,8 @@
 		B5D0A42B21C417BC005EF3C6 /* IExperienceGiver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IExperienceGiver.h; sourceTree = "<group>"; };
 		B5D1747621FFCD730033DF2C /* CompositeImage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CompositeImage.h; sourceTree = "<group>"; };
 		B5D1747721FFCD730033DF2C /* CompositeImage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CompositeImage.m; sourceTree = "<group>"; };
+		B5D9CE7322F3311C00AC165A /* ImageLabelRadioButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageLabelRadioButton.h; sourceTree = "<group>"; };
+		B5D9CE7422F3311C00AC165A /* ImageLabelRadioButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageLabelRadioButton.m; sourceTree = "<group>"; };
 		B5DE1258218DAA1A000D6784 /* PixEngine.Scene.Objects.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PixEngine.Scene.Objects.h; sourceTree = "<group>"; };
 		B5DE1259218DAA34000D6784 /* PixEngine.Scene.Objects.classes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PixEngine.Scene.Objects.classes.h; sourceTree = "<group>"; };
 		B5DE125A218DAA51000D6784 /* IPosition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IPosition.h; sourceTree = "<group>"; };
@@ -419,6 +422,8 @@
 			children = (
 				B56D2C0A22EDAEF50001B14B /* RadioButton.h */,
 				B56D2C0B22EDAEF50001B14B /* RadioButton.m */,
+				B5D9CE7322F3311C00AC165A /* ImageLabelRadioButton.h */,
+				B5D9CE7422F3311C00AC165A /* ImageLabelRadioButton.m */,
 				B56D2C0D22EDB2190001B14B /* DoubleImageLabelRadioButton.h */,
 				B56D2C0E22EDB2190001B14B /* DoubleImageLabelRadioButton.m */,
 				B56D2C0222EDABAC0001B14B /* RadioButtonGroup.h */,
@@ -726,6 +731,7 @@
 				B56D2C0C22EDAEF50001B14B /* RadioButton.m in Sources */,
 				B5D0A41D21C3FA57005EF3C6 /* Entity.m in Sources */,
 				B57D414021A7754C00ABA93B /* Collision.m in Sources */,
+				B5D9CE7522F3311C00AC165A /* ImageLabelRadioButton.m in Sources */,
 				B5FD11A621EB614500D458A9 /* GuiPanel.m in Sources */,
 				B5E3802D2183B08D0007D013 /* Scene.m in Sources */,
 				B55FA71B21D7DFDA00526790 /* GridScene.m in Sources */,

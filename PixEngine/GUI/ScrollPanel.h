@@ -25,6 +25,9 @@ NS_ASSUME_NONNULL_BEGIN
     Vector2 *prevPosition;
     
     NSMutableArray *invisibleItems;
+    
+    id<IPosition> firstItem;
+    id<IPosition> lastItem;
 }
 
 @property (nonatomic) BOOL enabled;

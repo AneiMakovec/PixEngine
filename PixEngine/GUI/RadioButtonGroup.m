@@ -14,24 +14,21 @@
     self = [super init];
     if (self != nil) {
         buttons = [[NSMutableArray alloc] init];
-        lastButtonPressed = nil;
+        pressedButton = nil;
     }
     return self;
 }
 
-@synthesize scene;
+@synthesize pressedButton;
 
 
 - (void) updateWithGameTime:(GameTime *)gameTime {
+    // check if a new button was pressed
     for (RadioButton *button in buttons) {
-        if (button.isDown) {
-            if (lastButtonPressed == nil) {
-                lastButtonPressed = button;
-            } else if (lastButtonPressed != button) {
-                lastButtonPressed = button;
-                [self resetOtherButtons];
-                break;
-            }
+        if (button.isDown && button != pressedButton) {
+            pressedButton = button;
+            [self resetOtherButtons];
+            break;
         }
     }
 }
@@ -39,7 +36,10 @@
 
 
 
-- (void) addRadioButton:(RadioButton *)button {
+- (void) registerRadioButton:(RadioButton *)button {
+    if (button.isDown && pressedButton == nil)
+        pressedButton = button;
+    
     [buttons addObject:button];
     button.enabled = NO;
 }
@@ -53,7 +53,7 @@
 
 - (void) resetOtherButtons {
     for (RadioButton *button in buttons) {
-        if (button != lastButtonPressed) {
+        if (button != pressedButton) {
             [button reset];
         }
     }
@@ -62,6 +62,8 @@
 
 - (void) dealloc {
     [buttons release];
+    if (pressedButton != nil)
+        [pressedButton release];
     
     [super dealloc];
 }

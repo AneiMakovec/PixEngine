@@ -9,19 +9,20 @@
 #import <Foundation/Foundation.h>
 
 #import "PixEngine.Scene.Objects.h"
-#import "PixEngine.Scene.h"
 
 #import "RadioButton.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface RadioButtonGroup : NSObject<ISceneUser, NSFastEnumeration, ICustomUpdate> {
+@interface RadioButtonGroup : NSObject<NSFastEnumeration, ICustomUpdate> {
     NSMutableArray *buttons;
     
-    RadioButton *lastButtonPressed;
+    RadioButton *pressedButton;
 }
 
-- (void) addRadioButton:(RadioButton *)button;
+@property (nonatomic, readonly) RadioButton *pressedButton;
+
+- (void) registerRadioButton:(RadioButton *)button;
 
 @end
 

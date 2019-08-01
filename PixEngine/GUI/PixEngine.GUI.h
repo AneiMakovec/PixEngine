@@ -24,6 +24,7 @@
 #import "DoubleImageButton.h"
 #import "DoubleImageLabelButton.h"
 #import "RadioButton.h"
+#import "ImageLabelRadioButton.h"
 #import "DoubleImageLabelRadioButton.h"
 #import "RadioButtonGroup.h"
 
