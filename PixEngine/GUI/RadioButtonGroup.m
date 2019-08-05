@@ -13,20 +13,23 @@
 - (id) init {
     self = [super init];
     if (self != nil) {
-        buttons = [[NSMutableArray alloc] init];
-        pressedButton = nil;
+        buttons = [[NSMutableDictionary alloc] init];
+        pressedButtonKey = nil;
+        pressedButtonChanged = NO;
     }
     return self;
 }
 
-@synthesize pressedButton;
+@synthesize pressedButtonKey, pressedButtonChanged;
 
 
 - (void) updateWithGameTime:(GameTime *)gameTime {
     // check if a new button was pressed
-    for (RadioButton *button in buttons) {
-        if (button.isDown && button != pressedButton) {
-            pressedButton = button;
+    for (NSString *key in [buttons allKeys]) {
+        RadioButton *button = [buttons valueForKey:key];
+        if (button.isDown && key != pressedButtonKey) {
+            pressedButtonKey = key;
+            pressedButtonChanged = YES;
             [self resetOtherButtons];
             break;
         }
@@ -36,13 +39,20 @@
 
 
 
-- (void) registerRadioButton:(RadioButton *)button {
-    if (button.isDown && pressedButton == nil)
-        pressedButton = button;
+- (void) registerRadioButton:(RadioButton *)button forKey:(NSString *)key {
+    if (button.isDown && pressedButtonKey == nil) {
+        pressedButtonKey = key;
+    }
     
-    [buttons addObject:button];
+    [buttons setValue:button forKey:key];
     button.enabled = NO;
 }
+
+- (void) reset {
+    pressedButtonChanged = NO;
+}
+
+
 
 // enables fast enumeration
 - (NSUInteger) countByEnumeratingWithState:(NSFastEnumerationState *)state
@@ -52,8 +62,9 @@
 }
 
 - (void) resetOtherButtons {
-    for (RadioButton *button in buttons) {
-        if (button != pressedButton) {
+    for (NSString *key in [buttons allKeys]) {
+        if (key != pressedButtonKey) {
+            RadioButton *button = [buttons valueForKey:key];
             [button reset];
         }
     }
@@ -62,8 +73,8 @@
 
 - (void) dealloc {
     [buttons release];
-    if (pressedButton != nil)
-        [pressedButton release];
+    if (pressedButtonKey != nil)
+        [pressedButtonKey release];
     
     [super dealloc];
 }

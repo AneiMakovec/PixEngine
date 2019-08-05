@@ -15,14 +15,18 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface RadioButtonGroup : NSObject<NSFastEnumeration, ICustomUpdate> {
-    NSMutableArray *buttons;
+    NSMutableDictionary *buttons;
     
-    RadioButton *pressedButton;
+    NSString *pressedButtonKey;
+    BOOL pressedButtonChanged;
 }
 
-@property (nonatomic, readonly) RadioButton *pressedButton;
+@property (nonatomic, readonly) NSString *pressedButtonKey;
+@property (nonatomic) BOOL pressedButtonChanged;
 
-- (void) registerRadioButton:(RadioButton *)button;
+- (void) registerRadioButton:(RadioButton *)button forKey:(NSString *)key;
+
+- (void) reset;
 
 @end
 
