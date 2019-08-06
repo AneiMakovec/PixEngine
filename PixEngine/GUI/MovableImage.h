@@ -9,11 +9,12 @@
 #import <Foundation/Foundation.h>
 
 #import "Image.h"
+#import "ITouchUpdate.h"
 #import "PixEngine.Control.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface MovableImage : Image {
+@interface MovableImage : Image<ITouchUpdate> {
     Vector2 *defaultPosition;
     Vector2 *distance;
     
@@ -21,9 +22,6 @@ NS_ASSUME_NONNULL_BEGIN
     
     BOOL wasReleased;
 }
-
-- (void) updateWithInverseView:(Matrix *)inverseView;
-
 - (void) resetToDefaultPosition;
 
 - (void) snapToPosition:(Vector2 *)thePosition;

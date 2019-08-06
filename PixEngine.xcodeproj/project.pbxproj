@@ -57,6 +57,7 @@
 		B5E3805D2183B4A90007D013 /* Sprite.m in Sources */ = {isa = PBXBuildFile; fileRef = B5E3805C2183B4A90007D013 /* Sprite.m */; };
 		B5E380602183B4B90007D013 /* AnimatedSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = B5E3805F2183B4B90007D013 /* AnimatedSprite.m */; };
 		B5E380632183B4C80007D013 /* AnimatedSpriteFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = B5E380622183B4C80007D013 /* AnimatedSpriteFrame.m */; };
+		B5E3D56922F9B964004B574D /* DropInImage.m in Sources */ = {isa = PBXBuildFile; fileRef = B5E3D56822F9B964004B574D /* DropInImage.m */; };
 		B5FD11A621EB614500D458A9 /* GuiPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = B5FD11A521EB614500D458A9 /* GuiPanel.m */; };
 		B5FE06EB21CC730200038407 /* PrimitiveBatch.m in Sources */ = {isa = PBXBuildFile; fileRef = B5FE06EA21CC730200038407 /* PrimitiveBatch.m */; };
 /* End PBXBuildFile section */
@@ -227,6 +228,8 @@
 		B5E3805F2183B4B90007D013 /* AnimatedSprite.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnimatedSprite.m; sourceTree = "<group>"; };
 		B5E380612183B4C80007D013 /* AnimatedSpriteFrame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnimatedSpriteFrame.h; sourceTree = "<group>"; };
 		B5E380622183B4C80007D013 /* AnimatedSpriteFrame.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnimatedSpriteFrame.m; sourceTree = "<group>"; };
+		B5E3D56722F9B964004B574D /* DropInImage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DropInImage.h; sourceTree = "<group>"; };
+		B5E3D56822F9B964004B574D /* DropInImage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DropInImage.m; sourceTree = "<group>"; };
 		B5FD11A421EB614500D458A9 /* GuiPanel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GuiPanel.h; sourceTree = "<group>"; };
 		B5FD11A521EB614500D458A9 /* GuiPanel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GuiPanel.m; sourceTree = "<group>"; };
 		B5FE06E921CC730200038407 /* PrimitiveBatch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrimitiveBatch.h; sourceTree = "<group>"; };
@@ -369,12 +372,14 @@
 				B5309CD722C27084005CE22F /* TouchImage.m */,
 				B5309CD922C27B54005CE22F /* MovableImage.h */,
 				B5309CDA22C27B54005CE22F /* MovableImage.m */,
+				B5E3D56722F9B964004B574D /* DropInImage.h */,
+				B5E3D56822F9B964004B574D /* DropInImage.m */,
+				B5D1747621FFCD730033DF2C /* CompositeImage.h */,
+				B5D1747721FFCD730033DF2C /* CompositeImage.m */,
 				B5D0311921F27E3600C162A1 /* AnimatedImage.h */,
 				B5D0311A21F27E3600C162A1 /* AnimatedImage.m */,
 				B5D0311C21F27E5100C162A1 /* AnimatedImageFrame.h */,
 				B5D0311D21F27E5100C162A1 /* AnimatedImageFrame.m */,
-				B5D1747621FFCD730033DF2C /* CompositeImage.h */,
-				B5D1747721FFCD730033DF2C /* CompositeImage.m */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -733,6 +738,7 @@
 				B57D414021A7754C00ABA93B /* Collision.m in Sources */,
 				B5D9CE7522F3311C00AC165A /* ImageLabelRadioButton.m in Sources */,
 				B5FD11A621EB614500D458A9 /* GuiPanel.m in Sources */,
+				B5E3D56922F9B964004B574D /* DropInImage.m in Sources */,
 				B5E3802D2183B08D0007D013 /* Scene.m in Sources */,
 				B55FA71B21D7DFDA00526790 /* GridScene.m in Sources */,
 				B57D415421A775D400ABA93B /* AARectangleAARectangleCollision.m in Sources */,

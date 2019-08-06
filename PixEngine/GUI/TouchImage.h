@@ -9,11 +9,12 @@
 #import <Foundation/Foundation.h>
 
 #import "Image.h"
+#import "ITouchUpdate.h"
 #import "PixEngine.Control.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface TouchImage : Image {
+@interface TouchImage : Image<ITouchUpdate> {
     BOOL enabled;
     
     BOOL wasTouched;
@@ -22,8 +23,6 @@ NS_ASSUME_NONNULL_BEGIN
     
     int pressedID;
 }
-
-- (void) updateWithInverseView:(Matrix *)inverseView;
 
 @end
 

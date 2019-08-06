@@ -16,13 +16,14 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface GuiPanel : NSObject<ISceneUser, ICustomUpdate, ITouchUpdate> {
+@interface GuiPanel : NSObject<NSFastEnumeration, ISceneUser, ICustomUpdate, ITouchUpdate> {
     id<IScene> scene;
     
     NSMutableArray *items;
 }
 
-@property (nonatomic, retain) NSMutableArray *items;
+- (void) addItemToScene:(id)item;
+- (void) removeItemFromScene:(id)item;
 
 @end
 

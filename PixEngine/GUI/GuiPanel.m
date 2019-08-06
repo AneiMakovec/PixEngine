@@ -20,7 +20,7 @@
     return self;
 }
 
-@synthesize scene, items;
+@synthesize scene;
 
 - (void) addedToScene:(id<IScene>)scene {
     // Add child items to scene
@@ -43,6 +43,29 @@
 - (void) updateWithInverseView:(Matrix *)inverseView {
     // Override method in child implementations.
 }
+
+
+
+- (void) addItemToScene:(id)item {
+    [items addObject:item];
+    [scene addItem:item];
+}
+
+- (void) removeItemFromScene:(id)item {
+    [items removeObject:item];
+    [scene removeItem:item];
+}
+
+
+
+// enables fast enumeration
+- (NSUInteger) countByEnumeratingWithState:(NSFastEnumerationState *)state
+                                   objects:(id *)stackbuf
+                                     count:(NSUInteger)len {
+    return [items countByEnumeratingWithState:state objects:stackbuf count:len];
+}
+
+
 
 - (void) dealloc {
     [items release];
