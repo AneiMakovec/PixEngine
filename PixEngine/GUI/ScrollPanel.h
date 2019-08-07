@@ -17,7 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface ScrollPanel : GuiPanel {
     Rectangle *area;
     BOOL enabled;
-    BOOL blocked;
+    BOOL scrolling;
     
     int pressedID;
     int itemSize;
@@ -31,6 +31,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 @property (nonatomic) BOOL enabled;
+@property (nonatomic, readonly) BOOL scrolling;
 
 - (id) initWithArea:(Rectangle *)theArea itemSize:(int)size;
 

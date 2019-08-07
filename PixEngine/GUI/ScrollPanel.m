@@ -17,7 +17,7 @@
     if (self != nil) {
         area = [theArea retain];
         enabled = YES;
-        blocked = NO;
+        scrolling = NO;
         prevPosition = [[Vector2 alloc] init];
         itemSize = size;
         
@@ -26,7 +26,7 @@
     return self;
 }
 
-@synthesize enabled;
+@synthesize enabled, scrolling;
 
 - (void) addItem:(nonnull id)item {
     if ([invisibleItems count] == 0)
@@ -82,61 +82,71 @@
     for (TouchLocation *touch in touches) {
         Vector2* touchInScene = [Vector2 transform:touch.position with:inverseView];
         
-        if (!blocked) {
+        if (!scrolling) {
             if ((touchInScene.x >= area.x && touchInScene.x <= area.x + area.width && touchInScene.y >= area.y && touchInScene.y <= area.y + area.height) && touch.state != TouchLocationStateInvalid) {
                 
+                // check if player touched the panel area
                 if (touch.state == TouchLocationStatePressed) {
                     pressedID = touch.identifier;
                     
-                    // remember only y position
+                    // remember current position
+                    prevPosition.x = touchInScene.x;
                     prevPosition.y = touchInScene.y;
                     
-                    blocked = YES;
+                    
+                    //scrolling = YES;
+                }
+                
+                // now check if the player decided to scroll
+                if (touch.identifier == pressedID && touch.state == TouchLocationStateMoved && fabsf(touchInScene.y - prevPosition.y) > 5) {
+                    scrolling = YES;
+                    //NSLog(@"Started scrolling...");
                 }
             }
-        }
-        
-        // Only act to the touch that started the push.
-        if (touch.identifier == pressedID) {
-            if (touch.state == TouchLocationStateMoved) {
-                
-                // check if first or last item are not exiting area
-                if (firstItem.position.y <= area.y && lastItem.position.y >= area.y) {
-                    // calculate move distance
-                    float moveDist = touchInScene.y - prevPosition.y;
+        } else {
+            // Only act to the touch that started the push.
+            if (touch.identifier == pressedID) {
+                if (touch.state == TouchLocationStateMoved) {
                     
-                    // check if moving distance is too great for first item
-                    float diff = area.y - firstItem.position.y;
-                    if (diff < moveDist)
-                        moveDist = diff;
-                    
-                    // check if moving distance is too great for last item
-                    diff = area.y - lastItem.position.y;
-                    if (diff > moveDist)
-                        moveDist = diff;
-                    
-                    // move visible items
-                    for (id item in items) {
-                        id<IPosition> posItem = [item conformsToProtocol:@protocol(IPosition)] ? item : nil;
+                    // check if first or last item are not exiting area
+                    if (firstItem.position.y <= area.y && lastItem.position.y >= area.y) {
+                        // calculate move distance
+                        float moveDist = touchInScene.y - prevPosition.y;
                         
-                        if (posItem) {
-                            posItem.position.y += moveDist;
+                        // check if moving distance is too great for first item
+                        float diff = area.y - firstItem.position.y;
+                        if (diff < moveDist)
+                            moveDist = diff;
+                        
+                        // check if moving distance is too great for last item
+                        diff = area.y - lastItem.position.y;
+                        if (diff > moveDist)
+                            moveDist = diff;
+                        
+                        // move visible items
+                        for (id item in items) {
+                            id<IPosition> posItem = [item conformsToProtocol:@protocol(IPosition)] ? item : nil;
+                            
+                            if (posItem) {
+                                posItem.position.y += moveDist;
+                            }
+                        }
+                        
+                        // move invisible items
+                        for (id item in invisibleItems) {
+                            id<IPosition> posItem = [item conformsToProtocol:@protocol(IPosition)] ? item : nil;
+                            
+                            if (posItem) {
+                                posItem.position.y += moveDist;
+                            }
                         }
                     }
                     
-                    // move invisible items
-                    for (id item in invisibleItems) {
-                        id<IPosition> posItem = [item conformsToProtocol:@protocol(IPosition)] ? item : nil;
-                        
-                        if (posItem) {
-                            posItem.position.y += moveDist;
-                        }
-                    }
+                    prevPosition.y = touchInScene.y;
+                } else if (touch.state == TouchLocationStateReleased) {
+                    scrolling = NO;
+                    //NSLog(@"Finished scrolling..");
                 }
-                
-                prevPosition.y = touchInScene.y;
-            } else if (touch.state == TouchLocationStateReleased) {
-                blocked = NO;
             }
         }
     }
