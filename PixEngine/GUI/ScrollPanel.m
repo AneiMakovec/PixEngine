@@ -125,8 +125,14 @@
                         
                         // move visible items
                         for (id item in items) {
-                            id<IPosition> posItem = [item conformsToProtocol:@protocol(IPosition)] ? item : nil;
+                            id<ICustomMovable> moveItem = [item conformsToProtocol:@protocol(ICustomMovable)] ? item : nil;
+                            if (moveItem) {
+                                [moveItem moveY:moveDist];
+                                // skip checking for protocol IPosition to avoid double movements
+                                continue;
+                            }
                             
+                            id<IPosition> posItem = [item conformsToProtocol:@protocol(IPosition)] ? item : nil;
                             if (posItem) {
                                 posItem.position.y += moveDist;
                             }
@@ -134,8 +140,14 @@
                         
                         // move invisible items
                         for (id item in invisibleItems) {
-                            id<IPosition> posItem = [item conformsToProtocol:@protocol(IPosition)] ? item : nil;
+                            id<ICustomMovable> moveItem = [item conformsToProtocol:@protocol(ICustomMovable)] ? item : nil;
+                            if (moveItem) {
+                                [moveItem moveY:moveDist];
+                                // skip checking for protocol IPosition to avoid double movements
+                                continue;
+                            }
                             
+                            id<IPosition> posItem = [item conformsToProtocol:@protocol(IPosition)] ? item : nil;
                             if (posItem) {
                                 posItem.position.y += moveDist;
                             }

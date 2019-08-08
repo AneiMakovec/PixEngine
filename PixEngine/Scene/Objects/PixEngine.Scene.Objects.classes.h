@@ -7,7 +7,7 @@
 //
 
 // movement
-@protocol IPosition, IVelocity, IMovable;
+@protocol IPosition, IVelocity, IMovable, ICustomMovable;
 
 // rotation
 @protocol IRotation, IAngularVelocity, IRotable;

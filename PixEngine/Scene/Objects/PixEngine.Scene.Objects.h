@@ -10,6 +10,7 @@
 #import "IPosition.h"
 #import "IVelocity.h"
 #import "IMovable.h"
+#import "ICustomMovable.h"
 
 // rotation
 #import "IRotation.h"

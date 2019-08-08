@@ -119,6 +119,7 @@
 		B56D2C0D22EDB2190001B14B /* DoubleImageLabelRadioButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DoubleImageLabelRadioButton.h; sourceTree = "<group>"; };
 		B56D2C0E22EDB2190001B14B /* DoubleImageLabelRadioButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DoubleImageLabelRadioButton.m; sourceTree = "<group>"; };
 		B56D2C1022EDB55E0001B14B /* IButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IButton.h; sourceTree = "<group>"; };
+		B57A027522FC925E0003E509 /* ICustomMovable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ICustomMovable.h; sourceTree = "<group>"; };
 		B57B0D1C21A611840064B91F /* IVelocity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IVelocity.h; sourceTree = "<group>"; };
 		B57B0D1D21A611920064B91F /* IMovable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IMovable.h; sourceTree = "<group>"; };
 		B57B0D2021A611D30064B91F /* IRotation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IRotation.h; sourceTree = "<group>"; };
@@ -443,6 +444,7 @@
 				B5DE125A218DAA51000D6784 /* IPosition.h */,
 				B57B0D1C21A611840064B91F /* IVelocity.h */,
 				B57B0D1D21A611920064B91F /* IMovable.h */,
+				B57A027522FC925E0003E509 /* ICustomMovable.h */,
 			);
 			name = Movement;
 			sourceTree = "<group>";
