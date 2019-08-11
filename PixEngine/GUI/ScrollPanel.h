@@ -37,6 +37,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (id) initWithArea:(Rectangle *)theArea itemSize:(int)size;
 
 - (void) addItem:(nonnull id)item;
+- (void) removeItem:(nonnull id)item;
 
 @end
 

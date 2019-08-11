@@ -16,7 +16,7 @@
     self = [super init];
     if (self != nil) {
         area = [theArea retain];
-        enabled = YES;
+        enabled = NO;           // start disabled
         scrolling = NO;
         wasScrolling = NO;
         prevPosition = [[Vector2 alloc] init];
@@ -30,12 +30,29 @@
 @synthesize enabled, scrolling;
 
 - (void) addItem:(nonnull id)item {
-    if ([invisibleItems count] == 0)
+    if ([invisibleItems count] == 0 && [items count] == 0) {
         firstItem = item;
-    else
-        lastItem = item;
+        enabled = YES;      // when first item is added enable scrolling
+    }
+    
+    lastItem = item;
     
     [invisibleItems addObject:item];
+}
+
+- (void) removeItem:(id)item {
+    if ([invisibleItems containsObject:item]) {
+        [invisibleItems removeObject:item];
+        [scene removeItem:item];
+    } else if ([items containsObject:item]) {
+        [self removeItemFromScene:item];
+    }
+    
+    if ([item isEqual:firstItem]) {
+        [self updateFirstItem];
+    } else if ([item isEqual:lastItem]) {
+        [self updateLastItem];
+    }
 }
 
 - (void) updateWithGameTime:(GameTime *)gameTime {
@@ -110,10 +127,10 @@
                     // check if first or last item are not exiting area
                     if (firstItem.position.y <= area.y && lastItem.position.y >= area.y) {
                         // calculate move distance
-                        float moveDist = touchInScene.y - prevPosition.y;
+                        int moveDist = touchInScene.y - prevPosition.y;
                         
                         // check if moving distance is too great for first item
-                        float diff = area.y - firstItem.position.y;
+                        int diff = area.y - firstItem.position.y;
                         if (diff < moveDist)
                             moveDist = diff;
                         
@@ -159,6 +176,62 @@
                     wasScrolling = YES;
                 }
             }
+        }
+    }
+}
+
+
+
+- (void) updateFirstItem {
+    if ([items count] > 0) {
+        firstItem = [items lastObject];
+    } else if ([invisibleItems count] > 0) {
+        firstItem = [invisibleItems lastObject];
+    } else {
+        firstItem = nil;
+        enabled = NO;       // when last item is removed disable scrolling
+        return;
+    }
+    
+    // find first item
+    for (id item in items) {
+        id<IPosition> posItem = [item conformsToProtocol:@protocol(IPosition)] ? item : nil;
+        if (posItem && posItem.position.y < firstItem.position.y) {
+            firstItem = posItem;
+        }
+    }
+    
+    for (id item in invisibleItems) {
+        id<IPosition> posItem = [item conformsToProtocol:@protocol(IPosition)] ? item : nil;
+        if (posItem && posItem.position.y < firstItem.position.y) {
+            firstItem = posItem;
+        }
+    }
+}
+
+- (void) updateLastItem {
+    if ([items count] > 0) {
+        lastItem = [items lastObject];
+    } else if ([invisibleItems count] > 0) {
+        lastItem = [invisibleItems lastObject];
+    } else {
+        lastItem = nil;
+        enabled = NO;       // when last item is removed disable scrolling
+        return;
+    }
+    
+    // find last item
+    for (id item in items) {
+        id<IPosition> posItem = [item conformsToProtocol:@protocol(IPosition)] ? item : nil;
+        if (posItem && posItem.position.y > lastItem.position.y) {
+            lastItem = posItem;
+        }
+    }
+    
+    for (id item in invisibleItems) {
+        id<IPosition> posItem = [item conformsToProtocol:@protocol(IPosition)] ? item : nil;
+        if (posItem && posItem.position.y > lastItem.position.y) {
+            lastItem = posItem;
         }
     }
 }
