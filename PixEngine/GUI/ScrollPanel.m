@@ -18,6 +18,7 @@
         area = [theArea retain];
         enabled = YES;
         scrolling = NO;
+        wasScrolling = NO;
         prevPosition = [[Vector2 alloc] init];
         itemSize = size;
         
@@ -46,8 +47,7 @@
             if (posItem.position.y < area.y - itemSize || posItem.position.y > area.y + area.height) {
                 // set item invisible
                 [invisibleItems addObject:posItem];
-                [items removeObject:posItem];
-                [scene removeItem:posItem];
+                [self removeItemFromScene:posItem];
                 break;
             }
         }
@@ -60,8 +60,7 @@
         if (posItem) {
             if (posItem.position.y > area.y - itemSize && posItem.position.y < area.y + area.height) {
                 // set item visible
-                [scene addItem:posItem];
-                [items addObject:posItem];
+                [self addItemToScene:posItem];
                 [invisibleItems removeObject:posItem];
                 break;
             }
@@ -70,8 +69,12 @@
 }
 
 - (void) updateWithInverseView:(Matrix *)inverseView {
-    if (!enabled) {
+    if (!enabled)
         return;
+    
+    if (wasScrolling) {
+        wasScrolling = NO;
+        scrolling = NO;
     }
     
     TouchCollection *touches = [TouchPanelHelper getState];
@@ -92,15 +95,11 @@
                     // remember current position
                     prevPosition.x = touchInScene.x;
                     prevPosition.y = touchInScene.y;
-                    
-                    
-                    //scrolling = YES;
                 }
                 
                 // now check if the player decided to scroll
                 if (touch.identifier == pressedID && touch.state == TouchLocationStateMoved && fabsf(touchInScene.y - prevPosition.y) > 5) {
                     scrolling = YES;
-                    //NSLog(@"Started scrolling...");
                 }
             }
         } else {
@@ -128,6 +127,7 @@
                             id<ICustomMovable> moveItem = [item conformsToProtocol:@protocol(ICustomMovable)] ? item : nil;
                             if (moveItem) {
                                 [moveItem moveY:moveDist];
+
                                 // skip checking for protocol IPosition to avoid double movements
                                 continue;
                             }
@@ -156,8 +156,7 @@
                     
                     prevPosition.y = touchInScene.y;
                 } else if (touch.state == TouchLocationStateReleased) {
-                    scrolling = NO;
-                    //NSLog(@"Finished scrolling..");
+                    wasScrolling = YES;
                 }
             }
         }

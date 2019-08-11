@@ -18,6 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
     Rectangle *area;
     BOOL enabled;
     BOOL scrolling;
+    BOOL wasScrolling;
     
     int pressedID;
     int itemSize;
