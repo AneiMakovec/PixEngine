@@ -69,6 +69,12 @@
 //    origin = theOrigin;
 //}
 
+//- (void) setColor:(Color *)theColor {
+//    [theColor retain];
+//    [color release];
+//    color = theColor;
+//}
+
 - (void) dealloc {
     [texture release];
     [sourceRectangle release];

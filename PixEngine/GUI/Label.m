@@ -60,6 +60,12 @@
     verticalAlign = VerticalAlignCustom;
 }
 
+//- (void) setColor:(Color *)theColor {
+//    [theColor retain];
+//    [color release];
+//    color = theColor;
+//}
+
 - (void) setHorizontalAlign:(HorizontalAlign)value {
     horizontalAlign = value;
     [self updateOrigin];
