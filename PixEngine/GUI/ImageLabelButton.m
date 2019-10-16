@@ -13,13 +13,13 @@
 @implementation ImageLabelButton
 
 - (id) initWithInputArea:(Rectangle*)theInputArea
-              background:(Texture2D*)background
+              background:(Image*)background
                     font:(SpriteFont*)font
                     text:(NSString*)text
 {
     self = [super initWithInputArea:theInputArea];
     if (self != nil) {
-        backgroundImage = [[Image alloc] initWithTexture:background toRectangle:inputArea];
+        backgroundImage = [background retain];
         label = [[Label alloc] initWithFont:font
                                        text:text
                                    position:[Vector2 vectorWithX:inputArea.x + inputArea.width/2 y:inputArea.y + inputArea.height/2]];
@@ -40,6 +40,16 @@
 @synthesize backgroundImage, label;
 @synthesize labelColor, labelHoverColor, backgroundColor, backgroundHoverColor;
 
+- (void) setScaleUniform:(float)scale {
+    [super setScaleUniform:scale];
+    
+    [backgroundImage setScaleUniform:scale];
+    [label setScaleUniform:scale];
+    
+    label.position.x = inputArea.x + inputArea.width/2;
+    label.position.y = inputArea.y + inputArea.height/2;
+}
+
 - (void) setLabelColor:(Color *)value {
     [value retain];
     [labelColor release];
@@ -54,8 +64,9 @@
     backgroundImage.color = backgroundColor;
 }
 
-- (void) setBackground:(Texture2D *)background {
-    [backgroundImage setTexture:background];
+- (void) setBackgroundImage:(Image *)image {
+    [backgroundImage release];
+    backgroundImage = [image retain];
 }
 
 - (void) setText:(NSString *)text {

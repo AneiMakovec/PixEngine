@@ -13,10 +13,10 @@
 @implementation ImageButton
 
 - (id) initWithInputArea:(Rectangle*)theInputArea
-              background:(Texture2D*)background {
+              background:(Image*)background {
     self = [super initWithInputArea:theInputArea];
     if (self != nil) {
-        backgroundImage = [[Image alloc] initWithTexture:background toRectangle:inputArea];
+        backgroundImage = [background retain];
         
         if (background) {
             self.backgroundColor = [Color white];
@@ -30,6 +30,12 @@
 @synthesize backgroundImage;
 @synthesize backgroundColor, backgroundHoverColor;
 
+- (void) setScaleUniform:(float)scale {
+    [super setScaleUniform:scale];
+    
+    [backgroundImage setScaleUniform:scale];
+}
+
 - (void) setBackgroundColor:(Color *)value {
     [value retain];
     [backgroundColor release];
@@ -37,8 +43,9 @@
     backgroundImage.color = backgroundColor;
 }
 
-- (void) setBackground:(Texture2D *)background {
-    [backgroundImage setTexture:background];
+- (void) setBackgroundImage:(Image *)image {
+    [backgroundImage release];
+    backgroundImage = [image retain];
 }
 
 - (void) addedToScene:(id <IScene>)theScene {

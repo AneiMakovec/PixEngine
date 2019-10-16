@@ -27,7 +27,7 @@ NS_ASSUME_NONNULL_BEGIN
     BOOL initialized;
 }
 
-- (id) initWithImageTextures:(NSMutableArray *)textures color:(Color *)color x:(int)theX y:(int)theY width:(int)theWidth height:(int)theHeight;
+- (id) initWithImageTexture:(Texture2D *)texture sourceRectangles:(NSMutableArray *)rectangles color:(Color *)color x:(int)theX y:(int)theY width:(int)theWidth height:(int)theHeight;
 
 @end
 

@@ -12,23 +12,32 @@
 
 @implementation DoubleImageButton
 
-- (id) initWithInputArea:(Rectangle*)theInputArea notPressedBackground:(Texture2D *)notPressedBackground pressedBackground:(Texture2D *)pressedBackground {
+- (id) initWithInputArea:(Rectangle*)theInputArea notPressedBackground:(Image*)notPressedBackground pressedBackground:(Image*)pressedBackground {
     self = [super initWithInputArea:theInputArea];
     if (self != nil) {
-        pressedImage = [[Image alloc] initWithTexture:pressedBackground toRectangle:inputArea];
-        notPressedImage = [[Image alloc] initWithTexture:notPressedBackground toRectangle:inputArea];
+        pressedImage = [pressedBackground retain];
+        notPressedImage = [notPressedBackground retain];
     }
     return self;
 }
 
 @synthesize pressedImage, notPressedImage;
 
-- (void) setPressedBackground:(Texture2D *)background {
-    [pressedImage setTexture:background];
+- (void) setScaleUniform:(float)scale {
+    [super setScaleUniform:scale];
+    
+    [pressedImage setScaleUniform:scale];
+    [notPressedImage setScaleUniform:scale];
 }
 
-- (void) setNotPressedBackground:(Texture2D *)background {
-    [notPressedImage setTexture:background];
+- (void) setPressedImage:(Image *)image {
+    [pressedImage release];
+    pressedImage = [image retain];
+}
+
+- (void) setNotPressedImage:(Image *)image {
+    [notPressedImage release];
+    notPressedImage = [image retain];
 }
 
 - (void) addedToScene:(id <IScene>)theScene {

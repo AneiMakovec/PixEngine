@@ -32,14 +32,12 @@ NS_ASSUME_NONNULL_BEGIN
     Color *labelColor, *labelHoverColor, *backgroundColor, *backgroundHoverColor;
 }
 
-- (id) initWithInputArea:(Rectangle*)theInputArea background:(Texture2D*)background font:(SpriteFont *)font text:(NSString *)text;
+- (id) initWithInputArea:(Rectangle*)theInputArea background:(Image*)background font:(SpriteFont *)font text:(NSString *)text;
 
 @property (nonatomic, retain) Image *backgroundImage;
 @property (nonatomic, retain) Label *label;
 
 @property (nonatomic, retain) Color *labelColor, *labelHoverColor, *backgroundColor, *backgroundHoverColor;
-
-- (void) setBackground:(Texture2D*)background;
 
 - (void) setText:(NSString*)text;
 

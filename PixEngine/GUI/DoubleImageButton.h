@@ -28,13 +28,10 @@ NS_ASSUME_NONNULL_BEGIN
     Image *notPressedImage;
 }
 
-- (id) initWithInputArea:(Rectangle*)theInputArea notPressedBackground:(Texture2D*)notPressedBackground pressedBackground:(Texture2D*)pressedBackground;
+- (id) initWithInputArea:(Rectangle*)theInputArea notPressedBackground:(Image*)notPressedBackground pressedBackground:(Image*)pressedBackground;
 
 @property (nonatomic, retain) Image *pressedImage;
 @property (nonatomic, retain) Image *notPressedImage;
-
-- (void) setPressedBackground:(Texture2D*)background;
-- (void) setNotPressedBackground:(Texture2D*)background;
 
 @end
 

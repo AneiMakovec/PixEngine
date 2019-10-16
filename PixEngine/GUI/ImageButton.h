@@ -29,13 +29,11 @@ NS_ASSUME_NONNULL_BEGIN
     Color *backgroundColor, *backgroundHoverColor;
 }
 
-- (id) initWithInputArea:(Rectangle*)theInputArea background:(Texture2D*)background;
+- (id) initWithInputArea:(Rectangle*)theInputArea background:(Image*)background;
 
 @property (nonatomic, retain) Image *backgroundImage;
 
 @property (nonatomic, retain) Color *backgroundColor, *backgroundHoverColor;
-
-- (void) setBackground:(Texture2D*)background;
 
 @end
 

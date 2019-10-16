@@ -12,13 +12,13 @@
 
 @implementation DoubleImageLabelRadioButton
 
-- (id) initWithInputArea:(Rectangle*)theInputArea notPressedBackground:(Texture2D *)notPressedBackground pressedBackground:(Texture2D *)pressedBackground font:(SpriteFont *)font text:(NSString *)text isDown:(BOOL)down {
+- (id) initWithInputArea:(Rectangle*)theInputArea notPressedBackground:(Image *)notPressedBackground pressedBackground:(Image *)pressedBackground font:(SpriteFont *)font text:(NSString *)text isDown:(BOOL)down {
     self = [super initWithInputArea:theInputArea isDown:down];
     if (self != nil) {
         isDown = down;
         
-        pressedImage = [[Image alloc] initWithTexture:pressedBackground toRectangle:inputArea];
-        notPressedImage = [[Image alloc] initWithTexture:notPressedBackground toRectangle:inputArea];
+        pressedImage = [pressedBackground retain];
+        notPressedImage = [notPressedBackground retain];
         
         label = [[Label alloc] initWithFont:font
                                        text:text
@@ -31,12 +31,14 @@
 
 @synthesize pressedImage, notPressedImage, label;
 
-- (void) setPressedBackground:(Texture2D *)background {
-    [pressedImage setTexture:background];
+- (void) setPressedImage:(Image *)image {
+    [pressedImage release];
+    pressedImage = [image retain];
 }
 
-- (void) setNotPressedBackground:(Texture2D *)background {
-    [notPressedImage setTexture:background];
+- (void) setNotPressedImage:(Image *)image {
+    [notPressedImage release];
+    notPressedImage = [image retain];
 }
 
 - (void) setText:(NSString *)text {

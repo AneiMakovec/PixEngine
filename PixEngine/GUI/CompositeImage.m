@@ -12,10 +12,10 @@
 
 @implementation CompositeImage
 
-- (id) initWithImageTextures:(NSMutableArray *)textures color:(Color *)color x:(int)theX y:(int)theY width:(int)theWidth height:(int)theHeight {
+- (id) initWithImageTexture:(Texture2D *)texture sourceRectangles:(NSMutableArray *)rectangles color:(Color *)color x:(int)theX y:(int)theY width:(int)theWidth height:(int)theHeight {
     self = [super init];
     if (self != nil) {
-        if ([textures count] == ImageLocations) {
+        if ([rectangles count] == ImageLocations) {
             x = theX;
             y = theY;
             
@@ -29,7 +29,8 @@
             for (int i = 0; i < ImageLocations; i++) {
                 int gridX = i % 3;
                 int gridY = i / 3;
-                images[i] = [[Image alloc] initWithTexture:[textures objectAtIndex:i] toRectangle:[Rectangle rectangleWithX: x +imageWidth * gridX y: y + imageHeight * gridY width:imageWidth height:imageHeight]];
+                images[i] = [[Image alloc] initWithTexture:texture toRectangle:[Rectangle rectangleWithX: x +imageWidth * gridX y: y + imageHeight * gridY width:imageWidth height:imageHeight]];
+                [images[i] setSourceRectangle:rectangles[i]];
                 images[i].color = color;
             }
             

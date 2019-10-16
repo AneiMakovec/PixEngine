@@ -37,6 +37,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, readonly) BOOL wasPressed;
 @property (nonatomic, readonly) BOOL wasReleased;
 
+- (void) setScaleUniform:(float)scale;
+
 @end
 
 NS_ASSUME_NONNULL_END

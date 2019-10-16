@@ -12,10 +12,10 @@
 
 @implementation ImageLabelRadioButton
 
-- (id) initWithInputArea:(Rectangle*)theInputArea background:(Texture2D*)background font:(SpriteFont*)font text:(NSString*)text isDown:(BOOL)down {
+- (id) initWithInputArea:(Rectangle*)theInputArea background:(Image *)background font:(SpriteFont*)font text:(NSString*)text isDown:(BOOL)down {
     self = [super initWithInputArea:theInputArea isDown:down];
     if (self != nil) {
-        backgroundImage = [[Image alloc] initWithTexture:background toRectangle:inputArea];
+        backgroundImage = [background retain];
         label = [[Label alloc] initWithFont:font
                                        text:text
                                    position:[Vector2 vectorWithX:inputArea.x + inputArea.width/2 y:inputArea.y + inputArea.height/2]];
@@ -58,8 +58,9 @@
     backgroundImage.color = backgroundColor;
 }
 
-- (void) setBackground:(Texture2D *)background {
-    [backgroundImage setTexture:background];
+- (void) setBackgroundImage:(Image *)image {
+    [backgroundImage release];
+    backgroundImage = [image retain];
 }
 
 - (void) setText:(NSString *)text {

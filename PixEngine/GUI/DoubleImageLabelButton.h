@@ -31,14 +31,11 @@ NS_ASSUME_NONNULL_BEGIN
     Label *label;
 }
 
-- (id) initWithInputArea:(Rectangle*)theInputArea notPressedBackground:(Texture2D*)notPressedBackground pressedBackground:(Texture2D*)pressedBackground font:(SpriteFont *)font text:(NSString *)text;
+- (id) initWithInputArea:(Rectangle*)theInputArea notPressedBackground:(Image*)notPressedBackground pressedBackground:(Image*)pressedBackground font:(SpriteFont *)font text:(NSString *)text;
 
 @property (nonatomic, retain) Image *pressedImage;
 @property (nonatomic, retain) Image *notPressedImage;
 @property (nonatomic, retain) Label *label;
-
-- (void) setPressedBackground:(Texture2D*)background;
-- (void) setNotPressedBackground:(Texture2D*)background;
 
 - (void) setText:(NSString*)text;
 
