@@ -23,8 +23,8 @@
         label.verticalAlign = VerticalAlignMiddle;
         label.horizontalAlign = HorizontalAlignCenter;
 
-        self.labelColor = [Color black];
-        self.labelHoverColor = [Color white];
+        self.labelColor = [Color white];
+        self.labelHoverColor = [Color gray];
     }
     return self;
 }

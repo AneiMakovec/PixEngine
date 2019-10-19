@@ -63,17 +63,17 @@
     sourceRectangle = theSourceRectangle;
 }
 
-//- (void) setOrigin:(Vector2 *)theOrigin {
-//    [theOrigin retain];
-//    [origin release];
-//    origin = theOrigin;
-//}
+- (void) setOrigin:(Vector2 *)theOrigin {
+    [theOrigin retain];
+    [origin release];
+    origin = theOrigin;
+}
 
-//- (void) setColor:(Color *)theColor {
-//    [theColor retain];
-//    [color release];
-//    color = theColor;
-//}
+- (void) setColor:(Color *)theColor {
+    [theColor retain];
+    [color release];
+    color = theColor;
+}
 
 - (void) dealloc {
     [texture release];

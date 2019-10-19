@@ -38,6 +38,7 @@
 
 - (void) updateWithInverseView:(Matrix *)inverseView  {
     if (!enabled) {
+        wasReleased = NO;
         return;
     }
     

@@ -31,6 +31,8 @@ NS_ASSUME_NONNULL_BEGIN
     int pressedID;
 }
 
+@property (nonatomic) BOOL isDown;
+
 - (id) initWithInputArea:(Rectangle*)theInputArea isDown:(BOOL)down;
 
 - (void) reset;
