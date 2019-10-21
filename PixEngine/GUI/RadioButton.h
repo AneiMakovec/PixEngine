@@ -37,6 +37,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void) reset;
 
+- (void) setScaleUniform:(float)scale;
+
 @end
 
 NS_ASSUME_NONNULL_END

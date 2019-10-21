@@ -37,6 +37,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (Image*) currentImage;
 
+- (void) setLayerDepth:(float)layerDepth;
+
+- (void) setScaleUniform:(float)scale;
+
 @end
 
 NS_ASSUME_NONNULL_END

@@ -110,6 +110,18 @@ NSArray *frameStartSort;
     return frame.image;
 }
 
+- (void) setLayerDepth:(float)layerDepth {
+    for (AnimatedImageFrame *frame in frames) {
+        [frame setLayerDepth:layerDepth];
+    }
+}
+
+- (void) setScaleUniform:(float)scale {
+    for (AnimatedImageFrame *frame in frames) {
+        [frame setScaleUniform:scale];
+    }
+}
+
 - (void) dealloc {
     [frames release];
     [super dealloc];

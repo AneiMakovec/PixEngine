@@ -22,6 +22,10 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, readonly) Image *image;
 @property (nonatomic, readonly) NSTimeInterval start;
 
+- (void) setLayerDepth:(float)layerDepth;
+
+- (void) setScaleUniform:(float)scale;
+
 @end
 
 NS_ASSUME_NONNULL_END

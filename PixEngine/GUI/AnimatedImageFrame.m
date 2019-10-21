@@ -7,6 +7,7 @@
 //
 
 #import "AnimatedImageFrame.h"
+#import "PixEngine.GUI.h"
 
 @implementation AnimatedImageFrame
 
@@ -26,6 +27,14 @@
 
 @synthesize image;
 @synthesize start;
+
+- (void) setLayerDepth:(float)layerDepth {
+    image.layerDepth = layerDepth;
+}
+
+- (void) setScaleUniform:(float)scale {
+    [image setScaleUniform:scale];
+}
 
 - (void) dealloc
 {

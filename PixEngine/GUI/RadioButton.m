@@ -24,6 +24,11 @@
 
 @synthesize inputArea, enabled, isDown, scene;
 
+- (void) setScaleUniform:(float)scale {
+    inputArea.width *= scale;
+    inputArea.height *= scale;
+}
+
 - (void) addedToScene:(id <IScene>)theScene {
     // Override in child implementations
 }
