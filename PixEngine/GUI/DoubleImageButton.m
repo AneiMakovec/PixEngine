@@ -30,6 +30,11 @@
     [notPressedImage setScaleUniform:scale];
 }
 
+- (void) setLayerDepth:(float)depth {
+    pressedImage.layerDepth = depth;
+    notPressedImage.layerDepth = depth;
+}
+
 - (void) setPressedImage:(Image *)image {
     [pressedImage release];
     pressedImage = [image retain];

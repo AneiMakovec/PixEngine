@@ -33,6 +33,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, retain) Image *pressedImage;
 @property (nonatomic, retain) Image *notPressedImage;
 
+- (void) setLayerDepth:(float)depth;
+
 @end
 
 NS_ASSUME_NONNULL_END
