@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B5132834235F981A00164F2C /* ImageRadioButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B5132833235F981A00164F2C /* ImageRadioButton.m */; };
 		B51722C122F20CB0005718D4 /* ScrollPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = B51722C022F20CB0005718D4 /* ScrollPanel.m */; };
 		B52284CD21EF94A10005B3AC /* ImageButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B52284CC21EF94A10005B3AC /* ImageButton.m */; };
 		B52284D021EF97620005B3AC /* LabelButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B52284CF21EF97620005B3AC /* LabelButton.m */; };
@@ -75,6 +76,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B5132832235F981A00164F2C /* ImageRadioButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageRadioButton.h; sourceTree = "<group>"; };
+		B5132833235F981A00164F2C /* ImageRadioButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageRadioButton.m; sourceTree = "<group>"; };
 		B51722BF22F20CB0005718D4 /* ScrollPanel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScrollPanel.h; sourceTree = "<group>"; };
 		B51722C022F20CB0005718D4 /* ScrollPanel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScrollPanel.m; sourceTree = "<group>"; };
 		B51722C222F2109E005718D4 /* ITouchUpdate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ITouchUpdate.h; sourceTree = "<group>"; };
@@ -428,6 +431,8 @@
 			children = (
 				B56D2C0A22EDAEF50001B14B /* RadioButton.h */,
 				B56D2C0B22EDAEF50001B14B /* RadioButton.m */,
+				B5132832235F981A00164F2C /* ImageRadioButton.h */,
+				B5132833235F981A00164F2C /* ImageRadioButton.m */,
 				B5D9CE7322F3311C00AC165A /* ImageLabelRadioButton.h */,
 				B5D9CE7422F3311C00AC165A /* ImageLabelRadioButton.m */,
 				B56D2C0D22EDB2190001B14B /* DoubleImageLabelRadioButton.h */,
@@ -783,6 +788,7 @@
 				B58869AD21C4607C00CE4C0E /* ResetableLifetime.m in Sources */,
 				B55FA72F21D8151400526790 /* Button.m in Sources */,
 				B55FA73821D816CC00526790 /* Rectangle+extensions.m in Sources */,
+				B5132834235F981A00164F2C /* ImageRadioButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

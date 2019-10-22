@@ -1,20 +1,19 @@
 //
-//  ImageButton.m
+//  ImageRadioButton.m
 //  PixEngine
 //
-//  Created by Anei Makovec on 16/01/2019.
+//  Created by Anei Makovec on 22/10/2019.
 //  Copyright © 2019 Anei Makovec. All rights reserved.
 //
 
-#import "ImageButton.h"
+#import "ImageRadioButton.h"
 
 #import "Retronator.Xni.Framework.Input.Touch.h"
 
-@implementation ImageButton
+@implementation ImageRadioButton
 
-- (id) initWithInputArea:(Rectangle*)theInputArea
-              background:(Image*)background {
-    self = [super initWithInputArea:theInputArea];
+- (id) initWithInputArea:(Rectangle*)theInputArea background:(Image*)background isDown:(BOOL)down {
+    self = [super initWithInputArea:theInputArea isDown:down];
     if (self != nil) {
         backgroundImage = [background retain];
         
@@ -76,5 +75,6 @@
     [backgroundHoverColor release];
     [super dealloc];
 }
+
 
 @end
