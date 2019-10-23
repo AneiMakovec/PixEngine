@@ -26,7 +26,7 @@
 - (void) updateWithGameTime:(GameTime *)gameTime {
     // check if a new button was pressed
     for (NSString *key in [buttons allKeys]) {
-        RadioButton *button = [buttons valueForKey:key];
+        RadioButton *button = [buttons objectForKey:key];
         if (button.isDown && key != pressedButtonKey) {
             pressedButtonKey = key;
             pressedButtonChanged = YES;

@@ -22,6 +22,9 @@
             self.backgroundHoverColor = [[Color dimGray] retain];
         }
         
+        if (isDown)
+            backgroundImage.color = backgroundHoverColor;
+        
     }
     return self;
 }
@@ -40,6 +43,15 @@
     [backgroundColor release];
     backgroundColor = value;
     backgroundImage.color = backgroundColor;
+}
+
+- (void) setBackgroundHoverColor:(Color *)value {
+    [value retain];
+    [backgroundHoverColor release];
+    backgroundHoverColor = value;
+    
+    if (isDown)
+        backgroundImage.color = backgroundHoverColor;
 }
 
 - (void) setBackgroundImage:(Image *)image {
@@ -65,6 +77,13 @@
     if (isDown && !wasDown) {
         backgroundImage.color = backgroundHoverColor;
     } else if (!isDown && wasDown) {
+        backgroundImage.color = backgroundColor;
+    }
+}
+
+- (void) reset {
+    if (isDown) {
+        [super reset];
         backgroundImage.color = backgroundColor;
     }
 }
