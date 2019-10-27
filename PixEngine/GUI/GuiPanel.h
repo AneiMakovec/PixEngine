@@ -22,6 +22,8 @@ NS_ASSUME_NONNULL_BEGIN
     NSMutableArray *items;
 }
 
+@property (nonatomic, retain) NSMutableArray *items;
+
 - (void) addItemToScene:(id)item;
 - (void) removeItemFromScene:(id)item;
 

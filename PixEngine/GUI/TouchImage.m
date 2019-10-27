@@ -20,7 +20,7 @@
     return self;
 }
 
-@synthesize wasReleased;
+@synthesize wasReleased, isTouched, enabled;
 
 - (id) initWithTexture:(Texture2D *)theTexture toRectangle:(Rectangle *)rectangle {
     self = [super initWithTexture:theTexture position:[Vector2 vectorWithX:rectangle.x y:rectangle.y]];
@@ -35,6 +35,8 @@
 
 - (void) updateWithInverseView:(Matrix *)inverseView {
     if (!enabled) {
+        wasTouched = NO;
+        wasReleased = NO;
         return;
     }
     

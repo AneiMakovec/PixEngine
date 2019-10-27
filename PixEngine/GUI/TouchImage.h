@@ -24,7 +24,9 @@ NS_ASSUME_NONNULL_BEGIN
     int pressedID;
 }
 
+@property (nonatomic, readonly) BOOL isTouched;
 @property (nonatomic, readonly) BOOL wasReleased;
+@property (nonatomic) BOOL enabled;
 
 @end
 

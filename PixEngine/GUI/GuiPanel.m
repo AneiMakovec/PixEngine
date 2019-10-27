@@ -20,7 +20,7 @@
     return self;
 }
 
-@synthesize scene;
+@synthesize scene, items;
 
 - (void) addedToScene:(id<IScene>)scene {
     // Add child items to scene

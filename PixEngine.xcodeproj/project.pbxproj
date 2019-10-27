@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		B5132834235F981A00164F2C /* ImageRadioButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B5132833235F981A00164F2C /* ImageRadioButton.m */; };
 		B51722C122F20CB0005718D4 /* ScrollPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = B51722C022F20CB0005718D4 /* ScrollPanel.m */; };
+		B520CC32236501660034DB81 /* DynamicLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = B520CC31236501660034DB81 /* DynamicLabel.m */; };
 		B52284CD21EF94A10005B3AC /* ImageButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B52284CC21EF94A10005B3AC /* ImageButton.m */; };
 		B52284D021EF97620005B3AC /* LabelButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B52284CF21EF97620005B3AC /* LabelButton.m */; };
 		B52284D321EF9AA80005B3AC /* ImageLabelButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B52284D221EF9AA80005B3AC /* ImageLabelButton.m */; };
@@ -81,6 +82,8 @@
 		B51722BF22F20CB0005718D4 /* ScrollPanel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScrollPanel.h; sourceTree = "<group>"; };
 		B51722C022F20CB0005718D4 /* ScrollPanel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScrollPanel.m; sourceTree = "<group>"; };
 		B51722C222F2109E005718D4 /* ITouchUpdate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ITouchUpdate.h; sourceTree = "<group>"; };
+		B520CC30236501660034DB81 /* DynamicLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DynamicLabel.h; sourceTree = "<group>"; };
+		B520CC31236501660034DB81 /* DynamicLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DynamicLabel.m; sourceTree = "<group>"; };
 		B52284CB21EF94A10005B3AC /* ImageButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageButton.h; sourceTree = "<group>"; };
 		B52284CC21EF94A10005B3AC /* ImageButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageButton.m; sourceTree = "<group>"; };
 		B52284CE21EF97620005B3AC /* LabelButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LabelButton.h; sourceTree = "<group>"; };
@@ -393,6 +396,8 @@
 			children = (
 				B55FA72021D7F1E000526790 /* Label.h */,
 				B55FA72121D7F1E000526790 /* Label.m */,
+				B520CC30236501660034DB81 /* DynamicLabel.h */,
+				B520CC31236501660034DB81 /* DynamicLabel.m */,
 			);
 			name = Text;
 			sourceTree = "<group>";
@@ -784,6 +789,7 @@
 				B52284CD21EF94A10005B3AC /* ImageButton.m in Sources */,
 				B57B0D3A21A613A30064B91F /* Lifetime.m in Sources */,
 				B5D0A40E21C3F4B9005EF3C6 /* TextureStretcher.m in Sources */,
+				B520CC32236501660034DB81 /* DynamicLabel.m in Sources */,
 				B57D415121A775C700ABA93B /* AARectangleAAHalfPlaneCollision.m in Sources */,
 				B58869AD21C4607C00CE4C0E /* ResetableLifetime.m in Sources */,
 				B55FA72F21D8151400526790 /* Button.m in Sources */,

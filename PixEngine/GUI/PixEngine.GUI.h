@@ -11,6 +11,7 @@
 #import "IButton.h"
 
 #import "Label.h"
+#import "DynamicLabel.h"
 #import "Image.h"
 #import "TouchImage.h"
 #import "MovableImage.h"
