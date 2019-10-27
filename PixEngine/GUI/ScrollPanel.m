@@ -236,6 +236,17 @@
     }
 }
 
+- (void) removeAllItems {
+    [items removeAllObjects];
+    [invisibleItems removeAllObjects];
+    
+    enabled = NO;
+    scrolling = NO;
+    wasScrolling = NO;
+    prevPosition.x = 0;
+    prevPosition.y = 0;
+}
+
 
 - (void) dealloc {
     [area release];

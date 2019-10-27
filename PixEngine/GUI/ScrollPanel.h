@@ -39,6 +39,8 @@ NS_ASSUME_NONNULL_BEGIN
 - (void) addItem:(nonnull id)item;
 - (void) removeItem:(nonnull id)item;
 
+- (void) removeAllItems;
+
 @end
 
 NS_ASSUME_NONNULL_END
