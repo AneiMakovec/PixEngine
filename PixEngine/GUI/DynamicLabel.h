@@ -15,18 +15,20 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface DynamicLabel : GuiPanel {
     Vector2 *startingPosition;
-    int startX;
-    int startY;
+    float startX;
+    float startY;
     
-    int width;
+    float width;
     
-    int lineWidth;
-    int lineSpacing;
-    int charWidth;
-    int charHeight;
+    float lineWidth;
+    float lineSpacing;
+    float charWidth;
+    float charHeight;
+    
+    float space;
 }
 
-- (id) initWithPosition:(Vector2 *)position lineWidth:(int)lWidth lineSpacing:(int)lSpacing charWidth:(int)cWidth charHeight:(int)cHeight;
+- (id) initWithPosition:(Vector2 *)position lineWidth:(float)lWidth lineSpacing:(float)lSpacing charWidth:(float)cWidth charHeight:(float)cHeight  spaceWidth:(float)wSpace;
 
 - (void) addLabel:(Label *)label;
 

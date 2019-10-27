@@ -12,7 +12,7 @@
 
 @implementation DynamicLabel
 
-- (id) initWithPosition:(Vector2 *)position lineWidth:(int)lWidth lineSpacing:(int)lSpacing charWidth:(int)cWidth charHeight:(int)cHeight {
+- (id) initWithPosition:(Vector2 *)position lineWidth:(float)lWidth lineSpacing:(float)lSpacing charWidth:(float)cWidth charHeight:(float)cHeight spaceWidth:(float)wSpace {
     self = [super init];
     if (self != nil) {
         startingPosition = [position retain];
@@ -25,6 +25,8 @@
         lineSpacing = lSpacing;
         charWidth = cWidth;
         charHeight = cHeight;
+        
+        space = wSpace;
     }
     
     return self;
@@ -40,7 +42,7 @@
     label.position.x = startingPosition.x;
     label.position.y = startingPosition.y;
     
-    int dist = (int) ([label.text length] * charWidth) + charWidth;
+    float dist = (float) [label.text length] * charWidth + space;
     width += dist;
     
     startingPosition.x += dist;
@@ -53,8 +55,12 @@
         [scene removeItem:item];
     }
     
+    [items removeAllObjects];
+    
     startingPosition.x = startX;
     startingPosition.y = startY;
+    
+    width = 0;
 }
 
 @end
