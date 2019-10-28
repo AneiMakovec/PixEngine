@@ -40,6 +40,17 @@
     label.position.y = inputArea.y + inputArea.height/2;
 }
 
+- (void) setScaleUniform:(float)scale withLabelScale:(float)lScale {
+    [super setScaleUniform:scale];
+    
+    [pressedImage setScaleUniform:scale];
+    [notPressedImage setScaleUniform:scale];
+    [label setScaleUniform:lScale];
+    
+    label.position.x = inputArea.x + inputArea.width/2;
+    label.position.y = inputArea.y + inputArea.height/2;
+}
+
 - (void) setPressedImage:(Image *)image {
     [pressedImage release];
     pressedImage = [image retain];

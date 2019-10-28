@@ -240,6 +240,7 @@
     [items removeAllObjects];
     [invisibleItems removeAllObjects];
     
+    firstItem = nil;
     enabled = NO;
     scrolling = NO;
     wasScrolling = NO;
