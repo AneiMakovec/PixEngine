@@ -60,6 +60,7 @@
 		B5E380602183B4B90007D013 /* AnimatedSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = B5E3805F2183B4B90007D013 /* AnimatedSprite.m */; };
 		B5E380632183B4C80007D013 /* AnimatedSpriteFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = B5E380622183B4C80007D013 /* AnimatedSpriteFrame.m */; };
 		B5E3D56922F9B964004B574D /* DropInImage.m in Sources */ = {isa = PBXBuildFile; fileRef = B5E3D56822F9B964004B574D /* DropInImage.m */; };
+		B5F9510523686A6000FBC72F /* ReleaseArea.m in Sources */ = {isa = PBXBuildFile; fileRef = B5F9510423686A6000FBC72F /* ReleaseArea.m */; };
 		B5FD11A621EB614500D458A9 /* GuiPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = B5FD11A521EB614500D458A9 /* GuiPanel.m */; };
 		B5FE06EB21CC730200038407 /* PrimitiveBatch.m in Sources */ = {isa = PBXBuildFile; fileRef = B5FE06EA21CC730200038407 /* PrimitiveBatch.m */; };
 /* End PBXBuildFile section */
@@ -237,6 +238,8 @@
 		B5E380622183B4C80007D013 /* AnimatedSpriteFrame.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnimatedSpriteFrame.m; sourceTree = "<group>"; };
 		B5E3D56722F9B964004B574D /* DropInImage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DropInImage.h; sourceTree = "<group>"; };
 		B5E3D56822F9B964004B574D /* DropInImage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DropInImage.m; sourceTree = "<group>"; };
+		B5F9510323686A6000FBC72F /* ReleaseArea.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReleaseArea.h; sourceTree = "<group>"; };
+		B5F9510423686A6000FBC72F /* ReleaseArea.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReleaseArea.m; sourceTree = "<group>"; };
 		B5FD11A421EB614500D458A9 /* GuiPanel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GuiPanel.h; sourceTree = "<group>"; };
 		B5FD11A521EB614500D458A9 /* GuiPanel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GuiPanel.m; sourceTree = "<group>"; };
 		B5FE06E921CC730200038407 /* PrimitiveBatch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrimitiveBatch.h; sourceTree = "<group>"; };
@@ -261,6 +264,7 @@
 		B55FA71C21D7F13D00526790 /* GUI */ = {
 			isa = PBXGroup;
 			children = (
+				B5F9510223686A4A00FBC72F /* Areas */,
 				B56D2C0722EDAE4C0001B14B /* Buttons */,
 				B56D2C0622EDAE390001B14B /* Text */,
 				B56D2C0522EDAE1B0001B14B /* Images */,
@@ -675,6 +679,15 @@
 			path = Graphics;
 			sourceTree = "<group>";
 		};
+		B5F9510223686A4A00FBC72F /* Areas */ = {
+			isa = PBXGroup;
+			children = (
+				B5F9510323686A6000FBC72F /* ReleaseArea.h */,
+				B5F9510423686A6000FBC72F /* ReleaseArea.m */,
+			);
+			name = Areas;
+			sourceTree = "<group>";
+		};
 		B5FE06E821CC72E400038407 /* Primitive */ = {
 			isa = PBXGroup;
 			children = (
@@ -782,6 +795,7 @@
 				B5FE06EB21CC730200038407 /* PrimitiveBatch.m in Sources */,
 				B57D414B21A775AB00ABA93B /* ParticleAAHalfPlaneCollision.m in Sources */,
 				B57D413B21A7750D00ABA93B /* MovementPhysics.m in Sources */,
+				B5F9510523686A6000FBC72F /* ReleaseArea.m in Sources */,
 				B5309CDB22C27B54005CE22F /* MovableImage.m in Sources */,
 				B57D414E21A775B800ABA93B /* ParticleAARectangleCollision.m in Sources */,
 				B57B0D4D21A61AA40064B91F /* ConvexPolygon.m in Sources */,

@@ -31,6 +31,8 @@
 #import "DoubleImageLabelRadioButton.h"
 #import "RadioButtonGroup.h"
 
+#import "ReleaseArea.h"
+
 #import "ITouchUpdate.h"
 #import "GuiPanel.h"
 #import "ScrollPanel.h"
