@@ -94,6 +94,9 @@
         case HorizontalAlignRight:
             origin.x = size.x;
             break;
+        default:
+            origin.x = 0;
+            break;
     }
     
     switch (verticalAlign) {
@@ -105,6 +108,9 @@
             break;
         case VerticalAlignBottom:
             origin.y = size.y;
+            break;
+        default:
+            origin.x = 0;
             break;
     }
 }

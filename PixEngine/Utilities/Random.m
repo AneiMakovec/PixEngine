@@ -12,11 +12,11 @@
 
 + (void) initialize {
     // Seed with current time.
-    srandom(time(NULL));
+    srandom((int) time(NULL));
 }
 
 + (int) int {
-    return random();
+    return (int) random();
 }
 
 + (int) intLessThan:(int)maxValue {

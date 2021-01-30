@@ -21,7 +21,7 @@
     return self;
 }
 
-@synthesize wasReleased;
+@synthesize wasReleased, enabled;
 
 
 - (void) updateWithInverseView:(Matrix *)inverseView  {

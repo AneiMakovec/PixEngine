@@ -23,7 +23,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (void) relaxCollisionBetween:(id)item1 and:(id)item2 by:(Vector2*)relaxDistance;
 
-+ (void) exchangeEnergyBetween:(id)item1 and:(id)item2 along:(Vector2*)collisionNormal pointOfImpact:(Vector2*)pointOfImpact;
++ (void) exchangeEnergyBetween:(id)item1 and:(id)item2 along:(Vector2*)collisionNormal pointOfImpact:(Vector2* __nullable)pointOfImpact;
 
 @end
 
