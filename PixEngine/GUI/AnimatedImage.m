@@ -15,12 +15,12 @@
 @synthesize looping;
 @synthesize progress;
 
-NSArray *frameStartSort;
+NSArray *imageFrameStartSort;
 
 + (void) initialize {
     NSSortDescriptor *frameStartSortDescriptor = [[[NSSortDescriptor alloc] initWithKey:@"start" ascending:YES] autorelease];
     
-    frameStartSort = [[NSArray arrayWithObject:frameStartSortDescriptor] retain];
+    imageFrameStartSort = [[NSArray arrayWithObject:frameStartSortDescriptor] retain];
 }
 
 - (id) initWithDuration:(NSTimeInterval)theDuration {
@@ -40,7 +40,7 @@ NSArray *frameStartSort;
 
 - (void) addFrame:(AnimatedImageFrame *)frame {
     [frames addObject:frame];
-    [frames sortUsingDescriptors:frameStartSort];
+    [frames sortUsingDescriptors:imageFrameStartSort];
 }
 
 //- (Image *) imageAtTime:(NSTimeInterval)time {
